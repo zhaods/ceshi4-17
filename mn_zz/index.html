@@ -206,7 +206,6 @@
      </div> 
    </li> 
    <style>
-    .p5 .p5_txt p.txt_name{font-size: 26px; font-family: 'Microsoft Yahei'; color: #264197; padding-left: 1.1rem;display: block;}
      /*.p5 .p5_txt{position: absolute;top:8.3rem;z-index: 10;padding-top: 0px;}
      p.txt_top{width: 100%; font: 28px/1.38 'Microsoft Yahei'; color: #264197; font-weight: bold; text-align: center; margin-bottom: 0.20rem;position: absolute;top: 8.3rem;z-index: 99} */
    </style>
@@ -218,7 +217,7 @@
       <img src="http://p0.ifengimg.com/l/2017/13/b3920ff66ab0032/mb11.png" alt="" class="p5_mb" /> 
      <!-- picture 头像 --> <img src="http://p0.ifengimg.com/l/2017/13/b3920ff66ab0032/photo.jpg" alt="" class="picture" />
      <div class="p5_txt">
-        <p class="txt_top">{{msg_Te.msg_text}} <span class="txt_name">{{msg_Te.msg_name}}</span></p>
+        <p class="txt_top">{{msg_Te.msg_text}}<span class="txt_name">{{msg_Te.msg_name}}</span></p>
         <!-- <p class="txt_name"></p> -->
      </div>
    </li> 
@@ -506,7 +505,7 @@ $(function(){
         onrendered: function(canvas) {
           canvas.id = "mycanvas";
           //生成base64图片数据
-          alert('17:50');
+          alert('17:48');
           var dataUrl = canvas.toDataURL();
           $('.frame_pic').attr('src',dataUrl);
           showCanvas();
