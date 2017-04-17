@@ -8,8 +8,7 @@
 <title>见证好营养 一起好吸收</title> 
 <link rel="stylesheet" href="css/hsai.css" /> 
 <link rel="stylesheet" href="http://y2.ifengimg.com/package/t_20141209__22585/css/idangerous.swiper.css" /> 
-<script src="http://p1.ifengimg.com/l/2016/47/92febf6a0cb3e9a/jquery-1.8.3.min.js"></script> 
-<script type="text/javascript" src="http://p0.ifengimg.com/l/2017/13/b3920ff66ab0032/angular.min.js"></script> 
+<script src="http://p1.ifengimg.com/l/2016/47/92febf6a0cb3e9a/jquery-1.8.3.min.js"></script>
 <script>
 (function(doc, win) {
 			var docEl = doc.documentElement,
@@ -114,13 +113,7 @@
     <li class="p5" id="canv" style="background-color: #006dff;"> 
       <img src="" alt="" class="p5_mb" /> 
      <!-- picture 头像 --> 
-     <img src="" alt="" class="picture" /> 
-     <div class="p5_txt"> 
-      <!-- {{msg_text}} --> 
-      <p class="txt_top">{{msg_Te.msg_text}}</p> 
-      <p class="txt_name"><i>{{msg_Te.msg_name}}</i></p> 
-      <p class="lw_name">{{msg_Te.msg_name}}</p> 
-     </div> 
+     <img src="" alt="" class="picture" />
    </li>
     <li class="p6_1" style="z-index:999;background-color:#262932;"> 
      <div class="box"> 
@@ -146,23 +139,6 @@
 <script type="text/javascript" src="js/turnplate.js"></script>
 <script type="text/javascript" src="http://p0.ifengimg.com/l/2017/13/b3920ff66ab0032/base64.js"></script> 
 <script>
-  var app=angular.module('myApp',[]);
-	app.controller('myCtrl',function  ($scope) {
-		var msg_Te={};
-			msg_Te.msg_name='';
-			msg_Te.msg_text='';
-			$scope.msg_Te=msg_name;
-			$scope.msg_Te=msg_text;
-	})
-	var oHash = window.location.hash;
-	if(oHash){
-		var arr2 = oHash.split('=');
-		var oHash_num = arr2[1];
-		console.log(oHash_num)
-		if(oHash_num=='ok'){
-			$(".fxy").fadeIn();
-		}
-	}
 $(function(){
 		$('#textare').val('请保持在24个字以内');
 
@@ -179,14 +155,17 @@ $(function(){
       context.scale(1,1);
        alert('1')
       html2canvas($("#canv"),{
-          onrendered: function(canvas){
-              alert('14:30');
-              var dataUrl = canvas.toDataURL();
-              alert('ok');
-              $('.frame_pic').attr('src',dataUrl);
-              $('.p4').css('display','block');
-              $('.p6_1').hide();
-          }
+        allowTaint: true,
+        taintTest: false,
+        canvas : canvas,
+        onrendered: function(canvas){
+            alert('14:39');
+            var dataUrl = canvas.toDataURL();
+            alert('ok');
+            $('.frame_pic').attr('src',dataUrl);
+            $('.p4').css('display','block');
+            $('.p6_1').hide();
+        }
       });
     };
 
