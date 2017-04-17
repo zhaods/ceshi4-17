@@ -114,7 +114,12 @@
     <li class="p5" id="canv" style="background-color: #006dff;"> 
       <img src="" alt="" class="p5_mb" /> 
      <!-- picture 头像 --> 
-     <img src="" alt="" class="picture" />
+     <img src="" alt="" class="picture" /> 
+     <div class="p5_txt"> 
+      <p class="txt_top">{{msg_Te.msg_text}}</p> 
+      <p class="txt_name"><i>{{msg_Te.msg_name}}</i></p> 
+      <p class="lw_name">{{msg_Te.msg_name}}</p> 
+     </div>
    </li>
     <li class="p6_1" style="z-index:999;background-color:#262932;"> 
      <div class="box"> 
@@ -177,7 +182,7 @@ $(function(){
         taintTest: false,
         canvas : canvas,
         onrendered: function(canvas){
-            alert('14:49');
+            alert('14:52');
             var dataUrl = canvas.toDataURL();
             alert('ok');
             $('.frame_pic').attr('src',dataUrl);
