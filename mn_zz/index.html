@@ -218,8 +218,8 @@
       <img src="http://p0.ifengimg.com/l/2017/13/b3920ff66ab0032/mb11.png" alt="" class="p5_mb" /> 
      <!-- picture 头像 --> <img src="http://p0.ifengimg.com/l/2017/13/b3920ff66ab0032/photo.jpg" alt="" class="picture" />
      <div class="p5_txt">
-        <p class="txt_top">{{msg_Te.msg_text}}</p>
-        <!-- <p class="txt_name">{{msg_Te.msg_name}}</p> -->
+        <p class="txt_top">{{msg_Te.msg_text}} <span class="txt_name">{{msg_Te.msg_name}}</span></p>
+        <!-- <p class="txt_name"></p> -->
      </div>
    </li> 
     <!-- 围观点赞 --> 
@@ -506,7 +506,7 @@ $(function(){
         onrendered: function(canvas) {
           canvas.id = "mycanvas";
           //生成base64图片数据
-          alert('17:15');
+          alert('17:50');
           var dataUrl = canvas.toDataURL();
           $('.frame_pic').attr('src',dataUrl);
           showCanvas();
