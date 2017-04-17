@@ -447,14 +447,14 @@
 		}
 	}
 $(function(){
-		$('.p7_warp .p7_left').on('click', function(e) {
+		/*$('.p7_warp .p7_left').on('click', function(e) {
 	        e.preventDefault();
 	        swiperNested1.swipePrev();
 	    });
 	    $('.p7_warp .p7_right').on('click', function(e) {
 	        e.preventDefault();
 	        swiperNested1.swipeNext();
-	    });
+	    });*/
 		$('#textare').val('请保持在24个字以内');
 		var name_text = '',
 		name_share = '',
@@ -516,7 +516,7 @@ $(function(){
 			$('.p5').height(height);
 			$('.p5').width(width);
 		}
-		function showCanvas() {
+		/*function showCanvas() {
 			//提交数据
       alert('3')
 			root_url = "http://creative.ifeng.com/psm_v1/mengniu/index.php?_c=mengniu&_a=save";
@@ -550,7 +550,7 @@ $(function(){
               alert('提交失败');
           }
       });
-		};
+		};*/
 
 		var windw = $(window).width();
 		var windh = document.documentElement.clientHeight;
@@ -616,7 +616,7 @@ $(function(){
 				return false;
 			}
 			$('.p5').css('display','block');
-			//$('.p6_1').css('display','block');
+			$('.p6_1').css('display','block');
 			print();
 			$('.p5').css('display','none');
 		})
@@ -748,77 +748,4 @@ var root_arr=['喜大普奔！不花钱竟然可以去美国，还能现场看NB
       })
   }
 })
-  </script>
-  <script type="text/javascript">
-    var rootPath = "http://creative.ifeng.com/psm_v1/";
-    $(function(){
-        //初始加载获奖名单
-        $.getJSON(rootPath+"mengniu/index.php?_c=mengniu&_a=getuser&callback=?",function(json){
-            var data = eval(json);
-            zphtml(data.list,'h_prize');
-        });
-    });
-    //编号搜索
-    $('.sosuo').click(function(){
-    	var bh=parseInt($.trim($("#bh").val()));
-    	if(!bh){
-    		alert('请输入编号！');
-    		return false;
-    	}
-    	$.getJSON(rootPath+"mengniu/index.php?_c=mengniu&_a=search&callback=?",{bh:bh},function(json){
-            var data = eval(json);
-            $('.p6 .p6_content .p6_warp').css('display','none');
-            zphtml(data.list,'search');
-
-        });
-	});
-	//围观点赞
-	$('.but span').eq(2).click(function(){
-	    $.getJSON(rootPath+"mengniu/index.php?_c=mengniu&_a=listp&callback=?",function(json){
-	        var data = eval(json);
-	        zphtml(data.list,data.page);
-	    });
-	});
-    //分页
-    function zphtml(data,type){
-        var str=[];
-        if(type=='h_prize'){
-        	for(var i=0;i<data.length;i++){
-        		str.push("<dd>"+data[i]['nickname']+" <b>"+data[i]['prizeInfo']+"</b></dd>");
-        	}
-        	$(".turn_num dl").html(str.join(""));
-        }else{
-	        for(var i=0;i<data.length;i++){
-	        	if(type!='search'){
-	        		str.push("<div class='center_nei'>");
-	        	}      	
-	        	if(data[i]['flag']==1){
-	        		str.push("<div class='img_warp'><img src='http://p1.ifengimg.com/968d479714a706e2/2017/13/mb11.png' class='p8_mb'>");
-	        		str.push("<img src='"+data[i]['imgpath']+"' class='picture2' />");
-	        		str.push("<div class='p8_txt'>");
-	        	}else{
-	        		str.push("<div class='img_warp'><img src='http://p1.ifengimg.com/968d479714a706e2/2017/13/mb22.png' class='p8_mb'>");
-	        		str.push("<img src='"+data[i]['imgpath']+"' class='picture2 pit2' />");
-	        		str.push("<div class='p8_txt p8_txt2'>");
-	        	}	
-	        	str.push("<p class='txt_top'>"+data[i]['blog']+"</p>");
-	        	str.push("<p class='txt_name'><i>"+data[i]['nickname']+"</i></p><p class='lw_name2'>"+data[i]['nickname']+"</p></div></div>");
-	        	str.push("<div class='nei_txt'><div class='nei_txt_left'>");
-	        	str.push("<p class='p_name'>"+data[i]['nickname']+"</p><p class='p_num'>编号:	<span>00"+data[i]['id']+"</span></p></div>");
-	        	str.push("<div class='nei_txt_right'><a href='javascript:;' class='xin' id="+data[i]['id']+"></a><span class='num' id='mn"+data[i]['id']+"'>"+data[i]['prized']+"</span></div></div></div>");     	
-	        }
-	        if(type=='search'){
-	        	$(".center_nei2").html(str.join(""));
-        		$(".center_nei2").css('display','block');
-	        }else{
-	        	$(".p6_center").html(str.join("")); 
-	        	$(".p6_but").html(type);
-	        }  
-        }              
-    }
-    function next(url,p){
-        $.getJSON(url+"&_page="+p+"&callback=?",function(msg){
-            var data = eval(msg);
-            zphtml(data.list,data.page);
-        });
-    }</script></body></html>
+  </script></body></html>
