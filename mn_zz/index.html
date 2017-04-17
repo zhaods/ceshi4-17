@@ -157,7 +157,7 @@
       </div> 
       <a href="javascript:;" class="ok"></a> 
      </div> 
-   </li> 
+    </li> 
     <li class="p3" style="background: url(http://p0.ifengimg.com/l/2017/13/b3920ff66ab0032/p3_bg.jpg) no-repeat 0 0/100% 100%;"> 
      <div class="p3_content"> 
       <label> <span>昵称</span> <input type="text" id="name" value="" ng-model="msg_Te.msg_name" /> </label> 
@@ -187,7 +187,7 @@
       <a href="javascript:;" class="sc_phto"></a> 
       <input class="makepic" type="button" hidden="hidden" /> 
      </div> 
-   </li> 
+    </li> 
     <!-- 生成的海报 --> 
     <li class="p4" style="background: url(http://p0.ifengimg.com/l/2017/13/b3920ff66ab0032/p4_bg.jpg) no-repeat 0 0/100% 100%;"> 
      <div class="p4_top"> 
@@ -206,11 +206,12 @@
      </div> 
    </li> 
    <style>
+    .p5 .p5_txt{position: absolute;top:8.3rem;z-index: 10;padding-top: 0px;}
      /* p.txt_top{width: 100%; font: 28px/1.38 'Microsoft Yahei'; color: #264197; font-weight: bold; text-align: center; margin-bottom: 0.20rem;position: absolute;top: 8.3rem;z-index: 99} */
    </style>
     <!-- 模板层 -->
     <li class="p5" style="background-color: #006dff;">
-      <div class="p5_txt"><p class="txt_top">{{msg_Te.msg_text}}</p></div>
+      <div class="p5_txt"><p class="txt_top">{{msg_Te.msg_text}}ddd</p></div>
       <!-- <p class="txt_name"><i>{{msg_Te.msg_name}}</i></p> 
       <p class="lw_name">{{msg_Te.msg_name}}</p>  -->
      
@@ -501,7 +502,7 @@ $(function(){
         onrendered: function(canvas) {
           canvas.id = "mycanvas";
           //生成base64图片数据
-          alert('16:14');
+          alert('16:25');
           var dataUrl = canvas.toDataURL();
           $('.frame_pic').attr('src',dataUrl);
           showCanvas();
