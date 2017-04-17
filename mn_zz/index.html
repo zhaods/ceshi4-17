@@ -204,8 +204,10 @@
      </div> 
    </li> 
     <!-- 模板层 --> 
-    <li class="p5" id="canv" style="background-color: #006dff;"> <img src="http://p0.ifengimg.com/l/2017/13/b3920ff66ab0032/mb22.png" alt="" class="p5_mb" /> 
-     <!-- picture 头像 --> <img src="http://p0.ifengimg.com/l/2017/13/b3920ff66ab0032/photo.jpg" alt="" class="picture" /> 
+    <li class="p5" id="canv" style="background-color: #006dff;"> 
+      <img src="" alt="" class="p5_mb" /> 
+     <!-- picture 头像 --> 
+     <img src="" alt="" class="picture" /> 
      <div class="p5_txt"> 
       <!-- {{msg_text}} --> 
       <p class="txt_top">{{msg_Te.msg_text}}</p> 
@@ -441,9 +443,6 @@ $(function(){
 	        swiperNested1.swipeNext();
 	    });*/
 		$('#textare').val('请保持在24个字以内');
-		var name_text = '',
-		name_share = '',
-		index_share = '';
 		//WeixinShare = new weixinshare();
 		var ua = navigator.userAgent,
 		weixin = ua.match(/MicroMessenger/ig),
@@ -482,6 +481,7 @@ $(function(){
               alert('2');
               var dataUrl = canvas.toDataURL();
               $('.frame_pic').attr('src',dataUrl);
+              alert('3');
               $('.p4').css('display','block');
               $('.p6_1').hide();
           }
@@ -606,131 +606,4 @@ $(function(){
 			$('.p5').css('display','none');
 		})
 
- 
-var root_arr=['喜大普奔！不花钱竟然可以去美国，还能现场看NBA！','我发言人都做过，现在有机会当蒙牛新养道的代言人了！','突然想去美国看场NBA，就看到这个，为我量身打造的？','喝牛奶拉肚子？作为新养道的忠实粉丝，我表示难以理解。'];
-  root_arr=root_arr[Math.floor(Math.random()*4)];
-  var mainTitle = "蒙牛——见证好营养 一起好吸收", //分享标题
-    mainDesc =root_arr; //分享描述
-    mainURL = location.href,
-    mainImgUrl = "http://p2.ifengimg.com/968d479714a706e2/2017/13/menniu.jpg"; //分享图标
-  var url = window.location.href;
-  var link = "http://creative.ifeng.com/WxInterface";
-  var data = {
-      'url':url,
-    }
-  $.getJSON(link+"/WxInterface.php?callback=?",data,function(data){
-    var sign = eval(data);
-    wx.config({
-      debug: false,
-      appId: sign.appId,
-      timestamp:sign.timestamp,
-      nonceStr: sign.nonceStr,
-      signature: sign.signature,
-      jsApiList: [
-        'onMenuShareTimeline',
-        'onMenuShareAppMessage',
-        'onMenuShareQQ',
-        'onMenuShareWeibo'
-      ]
-    });
-    
-    SetWordsWexin(mainTitle,mainDesc,mainURL,mainImgUrl);
-  });
-
-  function fx_txt() {
-    alert('分享成功！');
-    var cooke_email =getCookie('fenxiang_na');
-    var cooke_fx =getCookie('fx_ok');
-    //alert(cooke_email);
-    if(cooke_email){
-      iphone = getCookie('fenxiang_ph');
-      nickname1 = getCookie('fenxiang_na');
-      if(cooke_fx){
-        $("#layercon_3").fadeOut();
-      }else{
-        $("#layercon_3").fadeIn();
-      }
-      $(".fxy").fadeOut();
-      //alert(iphone);
-    }
-  }
-
-  $('.cj').click(function  () {
-      if(iOwk){
-        var cooke_email =getCookie('fenxiang_na');
-        var cooke_fx =getCookie('fx_ok');
-        //alert(cooke_fx);
-        if(cooke_fx){
-          alert('亲~每天只能抽奖一次喔~');
-          return false;
-        };
-        if(cooke_email){
-          alert('分享到朋友圈抽奖');
-          return false;
-        };
-      };
-    })
-
-  function SetWordsWexin(title,desc,url,image){
-      wx.ready(function  () {
-              // 分享给朋友圈
-            wx.onMenuShareTimeline({
-                title: desc, // 分享标题
-                link: url, // 分享链接
-                imgUrl: image, // 分享图标
-                success: function () {
-                    // 用户确认分享后执行的回调函数
-                    fx_txt();
-                },
-                cancel: function () { 
-                    // 用户取消分享后执行的回调函数
-                }
-            });
-            // 朋友
-            wx.onMenuShareAppMessage({
-                title: title, // 分享标题
-                desc: desc, // 分享描述
-                link: url, // 分享链接
-                imgUrl: image, // 分享图标
-                type: '', // 分享类型,music、video或link，不填默认为link
-                dataUrl: '', // 如果type是music或video，则要提供数据链接，默认为空
-                success: function () {
-                    // 用户确认分享后执行的回调函数
-                    fx_txt();
-                },
-                cancel: function () { 
-                    // 用户取消分享后执行的回调函数
-                }
-            });
-            // QQ
-            wx.onMenuShareQQ({
-                title:title, // 分享标题
-                desc: desc,// 分享描述
-                link: url, // 分享链接
-                imgUrl:image,// 分享图标
-                success: function () {
-                   // 用户确认分享后执行的回调函数
-                    fx_txt();
-                },
-                cancel: function () { 
-                   // 用户取消分享后执行的回调函数
-                }
-            });
-            // 新浪
-            wx.onMenuShareWeibo({
-                title: title, // 分享标题
-                desc: desc, // 分享描述
-                link: url, // 分享链接
-                imgUrl: image, // 分享图标
-                success: function () { 
-                   // 用户确认分享后执行的回调函数
-                    fx_txt();
-                },
-                cancel: function () { 
-                    // 用户取消分享后执行的回调函数
-                }
-            });
-      })
-  }
-})
   </script></body></html>
