@@ -204,10 +204,8 @@
      </div> 
    </li> 
     <!-- 模板层 --> 
-    <li class="p5" id="canv" style="background-color: #006dff;"> 
-      <img src="" alt="" class="p5_mb" /> 
-     <!-- picture 头像 --> 
-     <img src="" alt="" class="picture" /> 
+    <li class="p5" id="canv" style="background-color: #006dff;"> <img src="http://p0.ifengimg.com/l/2017/13/b3920ff66ab0032/mb22.png" alt="" class="p5_mb" /> 
+     <!-- picture 头像 --> <img src="http://p0.ifengimg.com/l/2017/13/b3920ff66ab0032/photo.jpg" alt="" class="picture" /> 
      <div class="p5_txt"> 
       <!-- {{msg_text}} --> 
       <p class="txt_top">{{msg_Te.msg_text}}</p> 
@@ -450,19 +448,6 @@ $(function(){
 		PC = !/iphone|ipod|ipad|android/ig.test(ua);
 
 
-		// 晋级海报
-		/*$('span.hb').click(function() {
-			//alert('敬请期待');
-      $('.main ul li').css('display', 'none');
-			$('.p7').css('display','block');
-		});
-
-		$('.gzsm_txt').on('touchmove', function(e) {
-			e.stopPropagation();
-		});
-		$('.turn_num').on('touchmove', function(e) {
-			e.stopPropagation();
-		});*/
 
     function print(){
       var w = $("#canv").width();
@@ -481,7 +466,6 @@ $(function(){
               alert('2');
               var dataUrl = canvas.toDataURL();
               $('.frame_pic').attr('src',dataUrl);
-              alert('3');
               $('.p4').css('display','block');
               $('.p6_1').hide();
           }
@@ -501,41 +485,6 @@ $(function(){
 			$('.p5').height(height);
 			$('.p5').width(width);
 		}
-		/*function showCanvas() {
-			//提交数据
-      alert('3')
-			root_url = "http://creative.ifeng.com/psm_v1/mengniu/index.php?_c=mengniu&_a=save";
-			var nickname=$('#name').val();
-			nickname = $.trim(nickname);
-			var phone=$("#phone").val();
-			var imgpath=$('#item1 img').attr("src"); 
-			var blog=$('#textare').val();
-			if($('.p2_content div span').eq(0).hasClass('turr')){
-				var flag=1;
-			}else{
-				var flag=2;
-			}
-			sub_data={
-				'nickname':nickname,
-				'email':'email',
-				'imgpath':imgpath,
-				'blog':blog,
-				'flag':flag,
-				'mobile':phone,
-			};
-      $.getJSON(root_url+"&callback=?",sub_data,function(json){
-          alert(4);
-          var data = eval(json);
-          if(data.type!='fail'){
-            alert(5);
-              $('.p4').css('display','block');
-              $('#dnum').html(""+data.type+"");
-      		   $('.p6_1').hide();
-          }else{
-              alert('提交失败');
-          }
-      });
-		};*/
 
 		var windw = $(window).width();
 		var windh = document.documentElement.clientHeight;
@@ -543,32 +492,6 @@ $(function(){
 		$('.main').height(windh);
 		document.body.addEventListener('touchmove', function (event) {event.preventDefault();}, false);
 		var ch=document.documentElement.clientHeight;
-		//选择模板
-		$('.p2_content div.odom').each(function  (index) {
-			$(this).on('click',function  () {
-				var oSrc=$(this).attr('data-num');
-				var p5_img=$('.p5_mb').attr('src',arr[index]);
-				var p8_img=$('.p8_mb').attr('src',arr2[index]);
-				$('.p2_content div.odom').removeClass('curr');
-				var curr=$('.p2_content div.odom').eq(index);
-				curr.addClass('curr');
-				if(index==1){
-					$('.lw_name').css('display','block');
-					$('.lw_name2').css('display','block');
-					$('.picture').addClass('pit');
-					$('.picture2').addClass('pit2');
-					$('.p5_txt').addClass('p5_txt2');
-					$('.p8_txt').addClass('p8_txt2');
-				}else{
-					$('.lw_name').fadeOut();
-					$('.lw_name2').fadeOut();
-					$('.picture').removeClass('pit');
-					$('.picture2').removeClass('pit');
-					$('.p5_txt').removeClass('p5_txt2');
-					$('.p8_txt').removeClass('p8_txt2');
-				}
-			})
-		})
     var iOwk=0;
 		// 生成海报
 		$('a.sc_phto').click(function  () {
@@ -606,4 +529,6 @@ $(function(){
 			$('.p5').css('display','none');
 		})
 
+ 
+})
   </script></body></html>
