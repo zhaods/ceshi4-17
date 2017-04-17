@@ -348,7 +348,6 @@
 		}
 	}
 $(function(){
-		
 		$('#textare').val('请保持在24个字以内');
 		//WeixinShare = new weixinshare();
 		var ua = navigator.userAgent,
@@ -370,8 +369,9 @@ $(function(){
        alert('1')
       html2canvas($("#canv"),{
           onrendered: function(canvas){
-              alert('13:54');
+              alert('14:00');
               var dataUrl = canvas.toDataURL();
+              alert('ok');
               $('.frame_pic').attr('src',dataUrl);
               $('.p4').css('display','block');
               $('.p6_1').hide();
@@ -381,18 +381,6 @@ $(function(){
 
 	 var height = $(window).height();
 	 var width = $(window).width();
-		if(PC){
-			$('.page').height(height);
-			$('.page').width('100%');
-			$('.p5').height(height);
-			$('.p5').width($('body').width());
-		}else{
-			$('.page').height(height);
-			$('.page').width(width);
-			$('.p5').height(height);
-			$('.p5').width(width);
-		}
-
 		var windw = $(window).width();
 		var windh = document.documentElement.clientHeight;
 		var Animate_Index = 0;
