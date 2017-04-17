@@ -1,0 +1,824 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="target-densitydpi=device-dpi, width=640px, user-scalable=no" /> 
+<meta name="apple-mobile-web-app-capable" content="yes" /> 
+<meta name="apple-mobile-web-app-status-bar-style" content="black" /> 
+<title>见证好营养 一起好吸收</title> 
+<link rel="stylesheet" href="css/hsai.css" /> 
+<link rel="stylesheet" href="http://y2.ifengimg.com/package/t_20141209__22585/css/idangerous.swiper.css" /> 
+<script src="http://p1.ifengimg.com/l/2016/47/92febf6a0cb3e9a/jquery-1.8.3.min.js"></script> 
+<script src="http://p2.ifengimg.com/l/2016/33/a80ffe2105de565/idangerous.swiper.min.js"></script> 
+<script type="text/javascript" src="http://p1.ifengimg.com/a/2016/0918/html2canvas.js"></script> 
+<script type="text/javascript" src="http://p1.ifengimg.com/a/2016/1122/H5UV.js"></script> 
+<script type="text/javascript" src="http://p0.ifengimg.com/l/2017/13/b3920ff66ab0032/angular.min.js"></script> 
+<script>
+(function(doc, win) {
+			var docEl = doc.documentElement,
+			resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+			recalc = function() { 
+				var clientWidth = docEl.clientWidth;
+				if (!clientWidth) return;
+				//docEl.style.fontSize = 50 * (clientWidth / 320) + 'px';
+				docEl.style.fontSize = 100 * (clientWidth / 750) + 'px';
+			};
+			if (!doc.addEventListener) return;
+			win.addEventListener(resizeEvt, recalc, false);
+			doc.addEventListener('DOMContentLoaded', recalc, false);
+
+		})(document, window);</script> 
+    <script src="http://h0.ifengimg.com/20150625/fa.min.js"></script>
+    </head>
+<body>
+<style>
+    @media (device-height:480px) and (-webkit-min-device-pixel-ratio:2){
+			.but{bottom: 0.1rem;}
+			.p1 .box{top:3rem;}
+			.p1 .box img.p1_txt1{margin-bottom: 0rem;}
+			.p5 .p5_txt{padding-top: 7.5rem;}
+			.p5 .p5_txt p.txt_top{margin-bottom: 0.15rem;}
+			.p5 .p5_txt2{padding-top: 8.2rem;}
+			.lw_name{top:6.7rem;}
+			.p2 .p2_content{top:3.1rem;}
+			.p2 .p2_content a.ok{bottom: 0.15rem;}
+			.p8 img.pit2{top:1.42rem;}
+			.p8 .p8_txt,.p5 .p5_txt{padding-top: 7.5rem;}
+			.p8 .p8_txt p.txt_top,.p5 .p5_txt p.txt_top{width: 100%; font: 28px/1.38 'Microsoft Yahei'; color: #264197; font-weight: bold; text-align: center; margin-bottom: 0.20rem;}
+			.p8 .p8_txt2{padding-top: 8.2rem;}
+			.p8 .p8_txt2 p.txt_top{color: #fff;margin-bottom: 0.1rem;}
+			.p8 .p8_txt2 p.txt_name{padding-left: 1.6rem;width: 4.54rem;line-height: 0.35rem;}
+			.p8 .p8_txt2 p.txt_name i{color: #fff;}
+			.lw_name2{position: absolute;color: #000;font-family: 'Microsoft Yahei';font-size: 26px;top:6.7rem;right: 0rem;display: block;}
+			.p3 .p3_content{top:2.2rem;}
+			.p4 .p4_top{margin: 0.9rem 0 0.22rem 0.8rem;}
+			.p4 .p4_content .p4_left .frame_pic{height: 5.78rem;}
+			.p6 .p6_content{padding-top: 0.5rem;}
+			.p6 .p6_content .p6_top{margin-bottom: 0.5rem;}
+		}</style> 
+<div class="main" ng-app="myApp"> 
+ <!-- 规则说明 --> 
+ <div class="gzsm"> 
+  <div class="gzsm_warp"> 
+   <a href="javascript:;" class="close"></a> 
+   <div class="gzsm_txt"> 
+    <p>你想成为蒙牛代言人吗？你想身临其境感受NBA文化吗？蒙牛与凤凰网联合发起&quot;见证好营养，一起好吸收&quot;主题活动邀您参加。参与活动，就有机会让你梦想成真，更多豪礼，拿到你手软喔~</p> 
+    <span class="index-arrow-down"></span> 
+    <h3>参与形式：</h3> 
+    <p>扫码包装二维码→注册报名留下你的信息→选择模板上传你的靓照→书写你的证言→生成海报→获得抽奖机会 </p> 
+    <p>*本次活动的参与者同意活动主办方将其上传的照片用于蒙牛产品的宣传和推广，并保证其上传的照片不会侵犯任何第三方的知识产权、隐私权、肖像权、名誉权或声誉等合法权利。</p> 
+    <!-- <p>ps.上传和蒙牛新养道的合影，就有可能得到神秘奖品哦。</p> --> 
+    <h3>活动时间：</h3> 
+    <p>2017年3月28日0：00—2017年7月15日23：59</p> 
+    <h3>活动区域：</h3> 
+    <p>中国大陆地区（港、澳、台地区除外）</p> 
+    <h3>活动机制：</h3> 
+    <p>1、根据网友点赞获得赞数最高的前三名，每个星期选出3位民星（每个周三公布），每人获得全年新养道产品（12箱）；</p> 
+    <p>2、活动期间共选出50名民星进行最终PK（评选结果公布时间：7月17日），其中点赞数最高的网友直接成为2018年新养道代言人；第二名获得NBA美国站门票一张；第三名获得NBA 深圳明星见面酒会门票一张；</p> 
+    <p>3、网友点赞并留下手机号码，参与抽奖即有机会获得以下奖品，而您的手机号码将成为我们和您沟通的凭证。网友可重复参与点赞，但每天每个手机号码最多可点赞10次。</p> 
+    <p>4、如有任何疑问，欢迎联系活动组。</p> 
+    <h3>兑奖时间/方式：</h3> 
+    <p>2017年3月28日0：00—2017年7月17日23：59，中奖后按操作提示进行兑奖，获取中奖结果后24小时内不兑奖视为自动放弃奖品，所有实物奖品免费寄送。</p> 
+    <p>服务电话：010-60675145（电话咨询时间：工作日早9：00-晚17：00；话费自理）</p> 
+    <h3>奖品设置：</h3> 
+    <p>特等奖 价值1200元NBA深圳站门票1张（共50张，中奖概率0.25%）；</p> 
+    <p>一等奖 价值4999元京东无门槛电子购物券1张（共5张，中奖概率0.025%）；京东购物卡为实体卡片，有效期三年，请您尽快使用，以免造成不必要的损失。</p> 
+    <p>二等奖 价值3288元iPad mini 4（32G黑色）1部（共10部，中奖概率0.05%）；</p> 
+    <p>三等奖 价值10元京东蒙牛旗舰店电子优惠券1张（共30000张，中奖概率99.79%）；中奖后可先领取10元优惠代金券，在京东旗舰店购买新养道零乳糖全脂型牛奶时可直接减免。代金券在微信卡包里查找，请尽快使用，逾期作废。</p> 
+    <p>奖品总价值415380元，综合中奖率100% </p> 
+    <h3>活动声明：</h3> 
+    <p>1.凡参与本次活动的参与者即视为同意本规则所述的各项规定；</p> 
+    <p>2.在法律允许的范围内，活动主办方对本次活动相关细节拥有解释权。如遇不可抗力因素，活动主办方拥有取消本次活动的权利。</p> 
+    <p>3.本次活动将以用户所提交手机号码作为唯一筛选确认中奖的信息凭证，中奖用户不得重复获得各类及每类实物奖品；如相关工作人员在收集的用户提交信息中，发现同一身份（包含但不限于姓名以及地址重复的情况）重复提交中奖信息的情况，将默认为该用户保留并发放其所获最高奖项，其他重复中奖项将被自动筛除。</p> 
+    <!--<p>4.活动主办方将在活动结束后30个工作日内与中奖者取得联系。如中奖者在收到活动举办方邮件的7个工作日内没有回复，则视为自动放弃。</p> --> 
+    <p>4.本活动奖项将不予兑换现金。由活动主办方统一安排发放。中奖者须遵守活动主办方规定，亦不设退换或延期服务。</p> 
+    <p>5.非由活动主办方故意或重大过失造成的获奖者在领取和使用奖品过程中所发生的事故，主办方无须承担相应责任。</p> 
+    <p>6.因活动参与者没有仔细阅读活动规则、时间安排等造成的损失和后果，须由中奖者本人承担。</p> 
+    <p>7.如在活动中，与第三方（包括但不限于物流公司）发生纠纷，一切责任由您本人承担，与活动网站无关。</p> 
+    <p>8.图示的礼品仅供参考，请以收到的实物为准。有关礼品如遇质量问题，消费者应与礼品生产商或其指定的经销商联系，按照其正常的退换货和维修规则办理相关事宜。</p> 
+    <p>9.用户一经确认领取奖品，不得自行撤销、更改或转让。如遇意外，无法提供指定奖品，活动主办方有权以价值相仿的奖品替代，所有奖品不得兑换现金或作价销售。</p> 
+    <p>10.活动中与奖品有关的个人所得税、任何费用和开支皆由获奖者自行承担。</p> 
+    <p>11.收到实物奖品后，请当场确认是否完好。若发现异常请直接与送件人员提出，若签收后发现礼品损坏，主办方将不承担责任。</p> 
+    <p>12.活动主办方会严格监控活动后台，若发现活动期间用不合法手段（如刷票）影响活动公平性的用户，活动主办方有权在不事先通知的前提下取消其活动参与资格，情节严重，则提交相关部门处理。</p> 
+   </div> 
+  </div> 
+ </div> 
+ <!-- 转盘 --> 
+ <div class="turntable" id="layercon_3" style="display:none;"> 
+  <div class="turn_warp">
+   <a href="javascript:;" class="zp_close"></a> 
+   <div id="turnplatewrapper" onselectstart="return false;" class="bgfix_2"> 
+    <div id="turnplate"> 
+     <div id="awards"></div> 
+     <div id="platebtn"></div> 
+    </div>
+   </div> 
+  </div> 
+  <div class="turn_num"> 
+   <h3>中奖名单公布</h3> 
+   <dl> 
+   </dl> 
+  </div> 
+ </div> 
+ <div class="sc_but"> 
+  <a href="http://coupon.m.jd.com/coupons/show.action?key=e5f38e5db118403ba8c00661c9fea1c8&roleId=6005396&to=mengniu.jd.com"><img src="http://p3.ifengimg.com/l/2017/13/b3920ff66ab0032/sc_but.png" alt="" /></a> 
+ </div> 
+ <!-- 分享指示页 -->
+ <div class="fxy"></div>
+ <!-- 输入信息 --> 
+ <div class="xinx"> 
+  <div class="xinx_warp"> 
+   <a href="javascript:;" class="xinx_colse"></a> 
+   <div class="xinx_01"> 
+    <label> <span>昵称</span> <input type="text" value="" id="nickname1" /> </label> 
+    <label> <span>手机</span> <input type="text" value="" id="iphone" maxlength="11" /> </label> 
+    
+    <a href="javascript:;" class="xinx_sub"></a> 
+   </div> 
+  </div> 
+ </div> 
+  <ul ng-contorller="myCtrl"> 
+    <li class="p1 block" style="top: 0px;z-index: 3;background: url(http://p2.ifengimg.com/l/2017/13/b3920ff66ab0032/p1_bg.jpg) no-repeat 0 0/100%;"> 
+     <div class="box"> 
+      <img src="http://p2.ifengimg.com/l/2017/13/b3920ff66ab0032/p1_txt1.png" alt="" class="p1_txt1" /> 
+      <img src="http://p3.ifengimg.com/l/2017/13/b3920ff66ab0032/p1_txt2.png" alt="" class="p1_txt2" /> 
+     </div> </li> 
+    <li class="p2" style="background: url(http://p2.ifengimg.com/l/2017/13/b3920ff66ab0032/p2_bg.jpg) no-repeat 0 0/100%;"> 
+     <div class="p2_content"> 
+      <div class="hb1 odom curr" data-num="mb1"> 
+       <div class="mban"></div> 
+       <img src="http://p2.ifengimg.com/l/2017/13/b3920ff66ab0032/hb1.jpg" alt="" /> 
+       <span class="turr" mb="1">已选中</span> 
+      </div> 
+      <div class="hb2 odom" data-num="mb2"> 
+       <div class="mban"></div> 
+       <img src="http://p2.ifengimg.com/l/2017/13/b3920ff66ab0032/hb2.jpg" alt="" /> 
+       <span mb="2">已选中</span> 
+      </div> 
+      <a href="javascript:;" class="ok"></a> 
+     </div> 
+   </li> 
+    <li class="p3" style="background: url(http://p0.ifengimg.com/l/2017/13/b3920ff66ab0032/p3_bg.jpg) no-repeat 0 0/100% 100%;"> 
+     <div class="p3_content"> 
+      <label> <span>昵称</span> <input type="text" id="name" value="" ng-model="msg_Te.msg_name" /> </label> 
+      <label> <span>手机</span> <input type="text" id="phone" value="" maxlength="11" /> </label> 
+     
+      <div class="blu"> 
+       <span class="myPt">我的照片</span> 
+       <div class="add-list"> 
+        <!-- <div class="item">
+  							<img src="images/l.jpg" alt=""/>
+  						</div> --> 
+        <div class="loding"> 
+         <img src="http://p2.ifengimg.com/l/2017/13/b3920ff66ab0032/logo.png" alt="" class="lod_logo" /> 
+        </div> 
+        <div class="item2" id="item1"></div>
+        <div class="item add">
+         <input id="add-img" type="file" /> 
+        </div> 
+       </div> 
+      </div> 
+      <div class="blu"> 
+       <span class="myPt">我的证言</span> 
+       <div class="testimony"> 
+        <textarea name="" id="textare" ng-model="msg_Te.msg_text" onfocus="if(this.value=='请保持在24个字以内') {this.value='';}" onblur="if(this.value=='') {this.value='请保持在24个字以内';}" maxlength="24"></textarea> 
+       </div> 
+      </div> 
+      <a href="javascript:;" class="sc_phto"></a> 
+      <input class="makepic" type="button" hidden="hidden" /> 
+     </div> 
+   </li> 
+    <!-- 生成的海报 --> 
+    <li class="p4" style="background: url(http://p0.ifengimg.com/l/2017/13/b3920ff66ab0032/p4_bg.jpg) no-repeat 0 0/100% 100%;"> 
+     <div class="p4_top"> 
+      <h3 class="name">{{msg_Te.msg_name}}</h3> 
+      <p class="num" id="dnum">101</p> 
+     </div> 
+     <div class="p4_content"> 
+      <img src="http://p2.ifengimg.com/l/2017/13/b3920ff66ab0032/ddd.png" alt="" class="dddd" /> 
+      <div class="p4_left"> 
+       <img class="frame_pic" src="" /> 
+      </div> 
+      <div class="p4_right"> 
+       <a href="javascript:;" class="fx"></a> 
+       <a href="javascript:;" class="cj"></a> 
+      </div> 
+     </div> 
+   </li> 
+    <!-- 模板层 --> 
+    <li class="p5" id="canv" style="background-color: #006dff;"> <img src="http://p0.ifengimg.com/l/2017/13/b3920ff66ab0032/mb22.png" alt="" class="p5_mb" /> 
+     <!-- picture 头像 --> <img src="http://p0.ifengimg.com/l/2017/13/b3920ff66ab0032/photo.jpg" alt="" class="picture" /> 
+     <div class="p5_txt"> 
+      <!-- {{msg_text}} --> 
+      <p class="txt_top">{{msg_Te.msg_text}}</p> 
+      <p class="txt_name"><i>{{msg_Te.msg_name}}</i></p> 
+      <p class="lw_name">{{msg_Te.msg_name}}</p> 
+     </div> 
+   </li> 
+    <!-- 围观点赞 --> 
+    <li class="p6" style="background: url(http://p2.ifengimg.com/l/2017/13/b3920ff66ab0032/p6_bg.jpg) no-repeat 0 0/100%;"> 
+     <div class="p6_content"> 
+      <div class="p6_top"> 
+       <label> <span class="bihao">编号搜索</span> <input type="text" id="bh" value="" /> <a href="javascript:;" class="sosuo"></a> </label> 
+      </div> 
+      <div class="p6_warp"> 
+       <div class="p6_center"> 
+        <div class="center_nei"> 
+         <!-- 模板1 --> 
+         <div class="img_warp"> 
+          <img src="http://p0.ifengimg.com/l/2017/13/b3920ff66ab0032/mb11.png" alt="" class="p8_mb" /> 
+          <!-- picture 头像 --> 
+          <img src="" alt="" class="picture2" /> 
+          <div class="p8_txt"> 
+           <!-- {{msg_text}} --> 
+           <p class="txt_top"></p> 
+           <p class="txt_name"><i>赵吉吉</i></p> 
+           <p class="lw_name2">赵吉吉</p> 
+          </div> 
+         </div> 
+         <div class="nei_txt"> 
+          <div class="nei_txt_left"> 
+           <p class="p_name">某某某</p> 
+           <p class="p_num">编号: <span>0027</span></p> 
+          </div> 
+          <div class="nei_txt_right"> 
+           <a href="javascript:;" class="xin"></a> 
+           <span class="num">22</span> 
+          </div> 
+         </div> 
+        </div> 
+        <div class="center_nei"> 
+         <!-- 模板2 picture2 p8_txt添加pit2 p8_txt2--> 
+         <div class="img_warp"> 
+          <img src="http://p0.ifengimg.com/l/2017/13/b3920ff66ab0032/mb22.png" alt="" class="p8_mb" /> 
+          <!-- picture 头像 --> 
+          <img src="" alt="" class="picture2 pit2" /> 
+          <div class="p8_txt p8_txt2"> 
+           <p class="txt_top"></p> 
+           <p class="txt_name"><i>赵吉吉</i></p> 
+           <p class="lw_name2">赵吉吉</p> 
+          </div> 
+         </div> 
+         <div class="nei_txt"> 
+          <div class="nei_txt_left"> 
+           <p class="p_name">某某某</p> 
+           <p class="p_num">编号: <span>0027</span></p> 
+          </div> 
+          <div class="nei_txt_right"> 
+           <a href="javascript:;" class="xin"></a> 
+           <span class="num">22</span> 
+          </div> 
+         </div> 
+        </div> 
+       </div> 
+       <div class="p6_but"> 
+        <a href="javascript:;" class="but_left"></a> 
+        <a href="javascript:;" class="but_right"></a> 
+       </div> 
+      </div> 
+      <!-- 搜索后的显示 --> 
+      <div class="center_nei2" style="display:none;"> 
+       <div class="img_warp"> 
+        <!-- 模板1 --> 
+        <img src="http://p0.ifengimg.com/l/2017/13/b3920ff66ab0032/mb11.png" alt="" class="p8_mb" /> 
+        <!-- picture 头像 --> 
+        <img src="" alt="" class="picture2" /> 
+        <div class="p8_txt"> 
+         <!-- {{msg_text}} --> 
+         <p class="txt_top">的啦看风景搜ID结果我了睡觉奥代理费金老师建GIF撒加工费</p> 
+         <p class="txt_name"><i>赵吉吉</i></p> 
+         <p class="lw_name2">赵吉吉</p> 
+        </div> 
+        <div class="nei_txt"> 
+         <div class="nei_txt_left"> 
+          <p class="p_name">某某某</p> 
+          <p class="p_num">编号: <span>0027</span></p> 
+         </div> 
+         <div class="nei_txt_right"> 
+          <a href="javascript:;" class="xin"></a> 
+          <span class="num">22</span> 
+         </div> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </li> 
+    <li class="p6_1" style="z-index:999;background-color:#262932;"> 
+     <div class="box"> 
+      <div id="page2" class="page page2" style="height: 667px; width: 375px;"> 
+       <div class="loadword"> 
+        <img class="translate" src="http://p1.ifengimg.com/ifengimcp/pic/20160918/5251f25c66065c55175f_size8_w750_h127.png" /> 
+        <p>正在努力生成中...</p> 
+       </div> 
+      </div> 
+     </div> 
+    </li> 
+    <li class="p7" style="background: url(http://p3.ifengimg.com/l/2017/13/b3920ff66ab0032/p7_bg.jpg) no-repeat 0 0/100%;"> 
+     <div class="p7_content"> 
+      <div class="p7_warp"> 
+       <a href="javascript:;" class="p7_left"></a> 
+       <a href="javascript:;" class="p7_right"></a> 
+       <div class="rwconter swiper-container swiper-nested-1"> 
+        <div class="rwnei swiper-wrapper"> 
+          <!-- 晋级海报一 --> 
+         <div class="rwtu swiper-slide">
+          <img src="http://p1.ifengimg.com/a/2017/4/13/3.png" alt="" /> 
+          <div class="nei_txt_left"> 
+           <div class="l_t"> 
+            <span>昵称</span> 
+            <p class="p_name">milk</p> 
+           </div> 
+           <div class="l_t"> 
+            <span>编号</span> 
+            <p class="p_name">339</p> 
+           </div> 
+          </div> 
+         </div> 
+           <!-- 晋级海报二 --> 
+         <div class="rwtu swiper-slide">
+          <img src="http://p1.ifengimg.com/a/2017/4/12/4.png" alt="" /> 
+          <div class="nei_txt_left"> 
+           <div class="l_t"> 
+            <span>昵称</span> 
+            <p class="p_name">胡敏</p> 
+           </div> 
+           <div class="l_t"> 
+            <span>编号</span> 
+            <p class="p_name">3152</p> 
+           </div> 
+          </div> 
+         </div> 
+          <!-- 晋级海报三 --> 
+         <div class="rwtu swiper-slide">
+          <img src="http://p1.ifengimg.com/a/2017/4/12/5.png" alt="" /> 
+          <div class="nei_txt_left"> 
+           <div class="l_t"> 
+            <span>昵称</span> 
+            <p class="p_name">chai</p> 
+           </div> 
+           <div class="l_t"> 
+            <span>编号</span> 
+            <p class="p_name">340</p> 
+           </div> 
+          </div> 
+         </div> 
+         <!-- 晋级海报四 --> 
+         <div class="rwtu swiper-slide">
+          <img src="http://p3.ifengimg.com/l/2017/15/56313ee225bad86/1.jpg" alt="" /> 
+          <div class="nei_txt_left"> 
+           <div class="l_t"> 
+            <span>昵称</span> 
+            <p class="p_name">瑶瑶</p> 
+           </div> 
+           <div class="l_t"> 
+            <span>编号</span> 
+            <p class="p_name">1533</p> 
+           </div> 
+          </div> 
+         </div> 
+         <!-- 晋级海报五 --> 
+         <div class="rwtu swiper-slide"> 
+          <img src="http://p2.ifengimg.com/l/2017/15/56313ee225bad86/2.png" alt="" /> 
+          <div class="nei_txt_left"> 
+           <div class="l_t"> 
+            <span>昵称</span>
+            <p class="p_name">田石</p> 
+           </div> 
+           <div class="l_t"> 
+            <span>编号</span> 
+            <p class="p_name">154</p> 
+           </div> 
+          </div> 
+         </div>
+
+        </div> 
+        <div class="pagination"></div> 
+       </div> 
+      </div> 
+      <div class="p7_but" style="display:none;"> 
+       <a href="javascript:;" class="p7b_l"></a> 
+       <a href="javascript:;" class="p7b_r"></a> 
+      </div> 
+     </div> 
+    </li>
+    <div class="but" style="display:block;"> 
+     <span class="gz"></span> 
+     <span class="zc clo_b"></span> 
+     <span class="dz clo_b"></span> 
+     <span class="hb clo_b"></span> 
+    </div> 
+  </ul> 
+</div> 
+<script src="http://p1.ifengimg.com/l/2017/13/b3920ff66ab0032/cookie.js"></script> 
+<script src="http://p1.ifengimg.com/l/2016/47/92febf6a0cb3e9a/jquery.touchSwipe.js"></script> 
+<script type="text/javascript" src="js/up_img.js"></script>
+<script type="text/javascript" src="js/turnplate.js"></script>
+<script type="text/javascript" src="http://p0.ifengimg.com/l/2017/13/b3920ff66ab0032/base64.js"></script>
+<script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script> 
+<script>
+  var app=angular.module('myApp',[]);
+	app.controller('myCtrl',function  ($scope) {
+		var msg_Te={};
+			msg_Te.msg_name='';
+			msg_Te.msg_text='';
+			$scope.msg_Te=msg_name;
+			$scope.msg_Te=msg_text;
+	})
+	var swiperNested1 = new Swiper('.swiper-nested-1', {
+		pagination: '.pagination',
+		speed: 600,
+		//loop:true,
+		// loopAdditionalSlides : -1,
+		// slidesPerView : 'auto',
+		// loopedSlides :2,
+		effect: 'fade',
+		preloadImages: true,
+		paginationClickable: true,
+		updateOnImagesReady: true,
+		grabCursor: true
+	})
+	var oHash = window.location.hash;
+	if(oHash){
+		var arr2 = oHash.split('=');
+		var oHash_num = arr2[1];
+		console.log(oHash_num)
+		if(oHash_num=='ok'){
+			$(".fxy").fadeIn();
+		}
+	}
+$(function(){
+		$('.p7_warp .p7_left').on('click', function(e) {
+	        e.preventDefault();
+	        swiperNested1.swipePrev();
+	    });
+	    $('.p7_warp .p7_right').on('click', function(e) {
+	        e.preventDefault();
+	        swiperNested1.swipeNext();
+	    });
+		$('#textare').val('请保持在24个字以内');
+		var name_text = '',
+		name_share = '',
+		index_share = '';
+		//WeixinShare = new weixinshare();
+		var ua = navigator.userAgent,
+		weixin = ua.match(/MicroMessenger/ig),
+		QQ = ua.match(/QQ\//),
+		PC = !/iphone|ipod|ipad|android/ig.test(ua);
+
+
+		// 晋级海报
+		/*$('span.hb').click(function() {
+			//alert('敬请期待');
+      $('.main ul li').css('display', 'none');
+			$('.p7').css('display','block');
+		});
+
+		$('.gzsm_txt').on('touchmove', function(e) {
+			e.stopPropagation();
+		});
+		$('.turn_num').on('touchmove', function(e) {
+			e.stopPropagation();
+		});*/
+
+    function print(){
+      var w = $("#canv").width();
+      var h = $("#canv").height();
+      //要将 canvas 的宽高设置成容器宽高的 1 倍
+      var canvas = document.createElement("canvas");
+      canvas.width = w * 1;
+      canvas.height = h * 1;
+      canvas.style.width = w + "px";
+      canvas.style.height = h + "px";
+      var context = canvas.getContext("2d");
+      context.scale(1,1);
+       alert('1')
+      html2canvas($("#canv"),{
+          onrendered: function(canvas){
+              alert('2');
+              var dataUrl = canvas.toDataURL();
+              $('.frame_pic').attr('src',dataUrl);
+              $('.p4').css('display','block');
+              $('.p6_1').hide();
+          }
+      });
+    };
+
+	 var height = $(window).height();
+	 var width = $(window).width();
+		if(PC){
+			$('.page').height(height);
+			$('.page').width('100%');
+			$('.p5').height(height);
+			$('.p5').width($('body').width());
+		}else{
+			$('.page').height(height);
+			$('.page').width(width);
+			$('.p5').height(height);
+			$('.p5').width(width);
+		}
+		function showCanvas() {
+			//提交数据
+      alert('3')
+			root_url = "http://creative.ifeng.com/psm_v1/mengniu/index.php?_c=mengniu&_a=save";
+			var nickname=$('#name').val();
+			nickname = $.trim(nickname);
+			var phone=$("#phone").val();
+			var imgpath=$('#item1 img').attr("src"); 
+			var blog=$('#textare').val();
+			if($('.p2_content div span').eq(0).hasClass('turr')){
+				var flag=1;
+			}else{
+				var flag=2;
+			}
+			sub_data={
+				'nickname':nickname,
+				'email':'email',
+				'imgpath':imgpath,
+				'blog':blog,
+				'flag':flag,
+				'mobile':phone,
+			};
+      $.getJSON(root_url+"&callback=?",sub_data,function(json){
+          alert(4);
+          var data = eval(json);
+          if(data.type!='fail'){
+            alert(5);
+              $('.p4').css('display','block');
+              $('#dnum').html(""+data.type+"");
+      		   $('.p6_1').hide();
+          }else{
+              alert('提交失败');
+          }
+      });
+		};
+
+		var windw = $(window).width();
+		var windh = document.documentElement.clientHeight;
+		var Animate_Index = 0;
+		$('.main').height(windh);
+		document.body.addEventListener('touchmove', function (event) {event.preventDefault();}, false);
+		var ch=document.documentElement.clientHeight;
+		//选择模板
+		$('.p2_content div.odom').each(function  (index) {
+			$(this).on('click',function  () {
+				var oSrc=$(this).attr('data-num');
+				var p5_img=$('.p5_mb').attr('src',arr[index]);
+				var p8_img=$('.p8_mb').attr('src',arr2[index]);
+				$('.p2_content div.odom').removeClass('curr');
+				var curr=$('.p2_content div.odom').eq(index);
+				curr.addClass('curr');
+				if(index==1){
+					$('.lw_name').css('display','block');
+					$('.lw_name2').css('display','block');
+					$('.picture').addClass('pit');
+					$('.picture2').addClass('pit2');
+					$('.p5_txt').addClass('p5_txt2');
+					$('.p8_txt').addClass('p8_txt2');
+				}else{
+					$('.lw_name').fadeOut();
+					$('.lw_name2').fadeOut();
+					$('.picture').removeClass('pit');
+					$('.picture2').removeClass('pit');
+					$('.p5_txt').removeClass('p5_txt2');
+					$('.p8_txt').removeClass('p8_txt2');
+				}
+			})
+		})
+    var iOwk=0;
+		// 生成海报
+		$('a.sc_phto').click(function  () {
+			var blog=$('#textare').val();
+			var a=$('#textare').val(); //证言
+			var oName=$('#name').val();
+			oName = $.trim(oName);
+			var phone=$("#phone").val();
+			var param = /^((13|15)|18|14|17)\d{9}$/;
+      
+      iOwk=1;
+      setCookie('fenxiang_na',oName);
+      setCookie('fenxiang_ph',phone);
+			if(!oName){
+				alert("请输入昵称");
+				return false;
+			}
+
+			if(!phone || !param.test(phone)){
+				alert('请填写正确手机号');
+				return false;
+			}
+
+			if($('#add-img').val() == ''){
+				alert("请上传你的靓照");
+				return false;
+			}
+			if(blog=='请保持在24个字以内'){
+				alert("请输入你的证言");
+				return false;
+			}
+			$('.p5').css('display','block');
+			//$('.p6_1').css('display','block');
+			print();
+			$('.p5').css('display','none');
+		})
+
+ 
+var root_arr=['喜大普奔！不花钱竟然可以去美国，还能现场看NBA！','我发言人都做过，现在有机会当蒙牛新养道的代言人了！','突然想去美国看场NBA，就看到这个，为我量身打造的？','喝牛奶拉肚子？作为新养道的忠实粉丝，我表示难以理解。'];
+  root_arr=root_arr[Math.floor(Math.random()*4)];
+  var mainTitle = "蒙牛——见证好营养 一起好吸收", //分享标题
+    mainDesc =root_arr; //分享描述
+    mainURL = location.href,
+    mainImgUrl = "http://p2.ifengimg.com/968d479714a706e2/2017/13/menniu.jpg"; //分享图标
+  var url = window.location.href;
+  var link = "http://creative.ifeng.com/WxInterface";
+  var data = {
+      'url':url,
+    }
+  $.getJSON(link+"/WxInterface.php?callback=?",data,function(data){
+    var sign = eval(data);
+    wx.config({
+      debug: false,
+      appId: sign.appId,
+      timestamp:sign.timestamp,
+      nonceStr: sign.nonceStr,
+      signature: sign.signature,
+      jsApiList: [
+        'onMenuShareTimeline',
+        'onMenuShareAppMessage',
+        'onMenuShareQQ',
+        'onMenuShareWeibo'
+      ]
+    });
+    
+    SetWordsWexin(mainTitle,mainDesc,mainURL,mainImgUrl);
+  });
+
+  function fx_txt() {
+    alert('分享成功！');
+    var cooke_email =getCookie('fenxiang_na');
+    var cooke_fx =getCookie('fx_ok');
+    //alert(cooke_email);
+    if(cooke_email){
+      iphone = getCookie('fenxiang_ph');
+      nickname1 = getCookie('fenxiang_na');
+      if(cooke_fx){
+        $("#layercon_3").fadeOut();
+      }else{
+        $("#layercon_3").fadeIn();
+      }
+      $(".fxy").fadeOut();
+      //alert(iphone);
+    }
+  }
+
+  $('.cj').click(function  () {
+      if(iOwk){
+        var cooke_email =getCookie('fenxiang_na');
+        var cooke_fx =getCookie('fx_ok');
+        //alert(cooke_fx);
+        if(cooke_fx){
+          alert('亲~每天只能抽奖一次喔~');
+          return false;
+        };
+        if(cooke_email){
+          alert('分享到朋友圈抽奖');
+          return false;
+        };
+      };
+    })
+
+  function SetWordsWexin(title,desc,url,image){
+      wx.ready(function  () {
+              // 分享给朋友圈
+            wx.onMenuShareTimeline({
+                title: desc, // 分享标题
+                link: url, // 分享链接
+                imgUrl: image, // 分享图标
+                success: function () {
+                    // 用户确认分享后执行的回调函数
+                    fx_txt();
+                },
+                cancel: function () { 
+                    // 用户取消分享后执行的回调函数
+                }
+            });
+            // 朋友
+            wx.onMenuShareAppMessage({
+                title: title, // 分享标题
+                desc: desc, // 分享描述
+                link: url, // 分享链接
+                imgUrl: image, // 分享图标
+                type: '', // 分享类型,music、video或link，不填默认为link
+                dataUrl: '', // 如果type是music或video，则要提供数据链接，默认为空
+                success: function () {
+                    // 用户确认分享后执行的回调函数
+                    fx_txt();
+                },
+                cancel: function () { 
+                    // 用户取消分享后执行的回调函数
+                }
+            });
+            // QQ
+            wx.onMenuShareQQ({
+                title:title, // 分享标题
+                desc: desc,// 分享描述
+                link: url, // 分享链接
+                imgUrl:image,// 分享图标
+                success: function () {
+                   // 用户确认分享后执行的回调函数
+                    fx_txt();
+                },
+                cancel: function () { 
+                   // 用户取消分享后执行的回调函数
+                }
+            });
+            // 新浪
+            wx.onMenuShareWeibo({
+                title: title, // 分享标题
+                desc: desc, // 分享描述
+                link: url, // 分享链接
+                imgUrl: image, // 分享图标
+                success: function () { 
+                   // 用户确认分享后执行的回调函数
+                    fx_txt();
+                },
+                cancel: function () { 
+                    // 用户取消分享后执行的回调函数
+                }
+            });
+      })
+  }
+})
+  </script>
+  <script type="text/javascript">
+    var rootPath = "http://creative.ifeng.com/psm_v1/";
+    $(function(){
+        //初始加载获奖名单
+        $.getJSON(rootPath+"mengniu/index.php?_c=mengniu&_a=getuser&callback=?",function(json){
+            var data = eval(json);
+            zphtml(data.list,'h_prize');
+        });
+    });
+    //编号搜索
+    $('.sosuo').click(function(){
+    	var bh=parseInt($.trim($("#bh").val()));
+    	if(!bh){
+    		alert('请输入编号！');
+    		return false;
+    	}
+    	$.getJSON(rootPath+"mengniu/index.php?_c=mengniu&_a=search&callback=?",{bh:bh},function(json){
+            var data = eval(json);
+            $('.p6 .p6_content .p6_warp').css('display','none');
+            zphtml(data.list,'search');
+
+        });
+	});
+	//围观点赞
+	$('.but span').eq(2).click(function(){
+	    $.getJSON(rootPath+"mengniu/index.php?_c=mengniu&_a=listp&callback=?",function(json){
+	        var data = eval(json);
+	        zphtml(data.list,data.page);
+	    });
+	});
+    //分页
+    function zphtml(data,type){
+        var str=[];
+        if(type=='h_prize'){
+        	for(var i=0;i<data.length;i++){
+        		str.push("<dd>"+data[i]['nickname']+" <b>"+data[i]['prizeInfo']+"</b></dd>");
+        	}
+        	$(".turn_num dl").html(str.join(""));
+        }else{
+	        for(var i=0;i<data.length;i++){
+	        	if(type!='search'){
+	        		str.push("<div class='center_nei'>");
+	        	}      	
+	        	if(data[i]['flag']==1){
+	        		str.push("<div class='img_warp'><img src='http://p1.ifengimg.com/968d479714a706e2/2017/13/mb11.png' class='p8_mb'>");
+	        		str.push("<img src='"+data[i]['imgpath']+"' class='picture2' />");
+	        		str.push("<div class='p8_txt'>");
+	        	}else{
+	        		str.push("<div class='img_warp'><img src='http://p1.ifengimg.com/968d479714a706e2/2017/13/mb22.png' class='p8_mb'>");
+	        		str.push("<img src='"+data[i]['imgpath']+"' class='picture2 pit2' />");
+	        		str.push("<div class='p8_txt p8_txt2'>");
+	        	}	
+	        	str.push("<p class='txt_top'>"+data[i]['blog']+"</p>");
+	        	str.push("<p class='txt_name'><i>"+data[i]['nickname']+"</i></p><p class='lw_name2'>"+data[i]['nickname']+"</p></div></div>");
+	        	str.push("<div class='nei_txt'><div class='nei_txt_left'>");
+	        	str.push("<p class='p_name'>"+data[i]['nickname']+"</p><p class='p_num'>编号:	<span>00"+data[i]['id']+"</span></p></div>");
+	        	str.push("<div class='nei_txt_right'><a href='javascript:;' class='xin' id="+data[i]['id']+"></a><span class='num' id='mn"+data[i]['id']+"'>"+data[i]['prized']+"</span></div></div></div>");     	
+	        }
+	        if(type=='search'){
+	        	$(".center_nei2").html(str.join(""));
+        		$(".center_nei2").css('display','block');
+	        }else{
+	        	$(".p6_center").html(str.join("")); 
+	        	$(".p6_but").html(type);
+	        }  
+        }              
+    }
+    function next(url,p){
+        $.getJSON(url+"&_page="+p+"&callback=?",function(msg){
+            var data = eval(msg);
+            zphtml(data.list,data.page);
+        });
+    }</script></body></html>
