@@ -210,15 +210,13 @@
    </style>
     <!-- 模板层 --> 
     <li class="p5" style="background-color: #006dff;">
-    <p class="txt">测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测 </p>
-      <img src="http://p0.ifengimg.com/l/2017/13/b3920ff66ab0032/mb22.png" alt="" class="p5_mb" /> 
-     <!-- picture 头像 --> <img src="http://p0.ifengimg.com/l/2017/13/b3920ff66ab0032/photo.jpg" alt="" class="picture" />
-      
-     <!-- <div class="p5_txt"> 
+    <div class="p5_txt"> 
       <p class="txt_top">{{msg_Te.msg_text}}</p> 
       <p class="txt_name"><i>{{msg_Te.msg_name}}</i></p> 
       <p class="lw_name">{{msg_Te.msg_name}}</p> 
-     </div>  -->
+     </div>
+      <img src="http://p0.ifengimg.com/l/2017/13/b3920ff66ab0032/mb22.png" alt="" class="p5_mb" /> 
+     <!-- picture 头像 --> <img src="http://p0.ifengimg.com/l/2017/13/b3920ff66ab0032/photo.jpg" alt="" class="picture" />
    </li> 
     <!-- 围观点赞 --> 
     <li class="p6" style="background: url(http://p2.ifengimg.com/l/2017/13/b3920ff66ab0032/p6_bg.jpg) no-repeat 0 0/100%;"> 
@@ -504,7 +502,7 @@ $(function(){
         onrendered: function(canvas) {
           canvas.id = "mycanvas";
           //生成base64图片数据
-          alert('15:58');
+          alert('16:05');
           var dataUrl = canvas.toDataURL();
           $('.frame_pic').attr('src',dataUrl);
           showCanvas();
