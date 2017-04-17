@@ -148,6 +148,15 @@
 			$scope.msg_Te=msg_name;
 			$scope.msg_Te=msg_text;
 	})
+	var oHash = window.location.hash;
+	if(oHash){
+		var arr2 = oHash.split('=');
+		var oHash_num = arr2[1];
+		console.log(oHash_num)
+		if(oHash_num=='ok'){
+			$(".fxy").fadeIn();
+		}
+	}
 $(function(){
 		$('#textare').val('请保持在24个字以内');
 
@@ -168,7 +177,7 @@ $(function(){
         taintTest: false,
         canvas : canvas,
         onrendered: function(canvas){
-            alert('14:47');
+            alert('14:49');
             var dataUrl = canvas.toDataURL();
             alert('ok');
             $('.frame_pic').attr('src',dataUrl);
