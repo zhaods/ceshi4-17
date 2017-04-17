@@ -8,7 +8,8 @@
 <title>见证好营养 一起好吸收</title> 
 <link rel="stylesheet" href="css/hsai.css" /> 
 <link rel="stylesheet" href="http://y2.ifengimg.com/package/t_20141209__22585/css/idangerous.swiper.css" /> 
-<script src="http://p1.ifengimg.com/l/2016/47/92febf6a0cb3e9a/jquery-1.8.3.min.js"></script>
+<script src="http://p1.ifengimg.com/l/2016/47/92febf6a0cb3e9a/jquery-1.8.3.min.js"></script> 
+<script type="text/javascript" src="http://p0.ifengimg.com/l/2017/13/b3920ff66ab0032/angular.min.js"></script> 
 <script>
 (function(doc, win) {
 			var docEl = doc.documentElement,
@@ -139,6 +140,14 @@
 <script type="text/javascript" src="js/turnplate.js"></script>
 <script type="text/javascript" src="http://p0.ifengimg.com/l/2017/13/b3920ff66ab0032/base64.js"></script> 
 <script>
+  var app=angular.module('myApp',[]);
+	app.controller('myCtrl',function  ($scope) {
+		var msg_Te={};
+			msg_Te.msg_name='';
+			msg_Te.msg_text='';
+			$scope.msg_Te=msg_name;
+			$scope.msg_Te=msg_text;
+	})
 $(function(){
 		$('#textare').val('请保持在24个字以内');
 
@@ -159,7 +168,7 @@ $(function(){
         taintTest: false,
         canvas : canvas,
         onrendered: function(canvas){
-            alert('14:39');
+            alert('14:47');
             var dataUrl = canvas.toDataURL();
             alert('ok');
             $('.frame_pic').attr('src',dataUrl);
