@@ -32,7 +32,7 @@
     </head>
 <body>
 <style>
-    @media (max-height:960px){
+    @media (device-height:480px) and (-webkit-min-device-pixel-ratio:2){
       .but{bottom: 0.1rem;}
       .p1 .box{top:3rem;}
       .p1 .box img.p1_txt1{margin-bottom: 0rem;}
@@ -419,7 +419,7 @@
 <script type="text/javascript" src="js/base64.js"></script>
  <script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script> 
 <script>
-  alert('14:35');
+  alert('14:42');
   var app=angular.module('myApp',[]);
   app.controller('myCtrl',function  ($scope) {
     var msg_Te={};
@@ -453,9 +453,9 @@
 $(function(){
     if (/(Android)/i.test(navigator.userAgent)) {
       alert('安卓');
-      $('.but').css({'bottom':'0.1rem!important'});
-      $('.p5 .p5_txt').css({'padding-top':'6.5rem!important'});
-      $('.p5 .p5_txt2').css({'padding-top':'7.5rem!important'});
+      $('.but').css({'display':'none'});
+      $('.p5 .p5_txt').css({'padding-top':'6.5rem'});
+      $('.p5 .p5_txt2').css({'padding-top':'7.5rem'});
     };
 
     $('.p7_warp .p7_left').on('click', function(e) {
