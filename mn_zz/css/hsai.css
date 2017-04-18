@@ -196,7 +196,7 @@ h3.lo_txt{font-size: 22px;text-align: center;color: #fff;font-family: 'Microsoft
 .p5 img.pit{width: 6.04rem;/*height: 6.5rem;*/top:1.58rem;left: 0.7rem;}
 .p5 .p5_txt{width: 5.77rem;height: 1.66rem;padding-top: 8.3rem;margin:0 auto;position: relative;z-index: 6;}
 .p5 .p5_txt p.txt_top{width: 100%;font:28px/1.38 'Microsoft Yahei';color: #264197;font-weight: bold;text-align: center;margin-bottom: 0.20rem;}
-.mb1_wz{position: absolute;bottom: 0.4rem;}
+.mb1_wz{position: absolute;bottom: 0.4rem;display: block;}
 .p5 .p5_txt p.txt_name{width: 5.04rem;height: 0.61rem;margin:0 auto;padding-left: 1rem;line-height: 0.4rem;}
 .p5 .p5_txt p.txt_name i{font-size: 26px;font-family: 'Microsoft Yahei';color: #264197;text-align: center;width: 1.8rem;display: block;}
 .p5 .p5_txt2{padding-top: 8.85rem;}
@@ -204,6 +204,7 @@ h3.lo_txt{font-size: 22px;text-align: center;color: #fff;font-family: 'Microsoft
 .p5 .p5_txt2 p.txt_name{padding-left: 1.6rem;width: 4.54rem;line-height: 0.35rem;}
 .p5 .p5_txt2 p.txt_name i{color: #fff;}
 .lw_name{position: absolute;color: #000;font-family: 'Microsoft Yahei';font-size: 26px;top:7.2rem;right: 0rem;display: none;}
+.mb2_wz{position: absolute;bottom: 0.4rem;display: none;width: 6.4rem;}
 /*围观*/
 .p6 .p6_content{width: 6.39rem;margin:0 auto;padding-top: 1rem;}
 .p6 .p6_content .p6_top{overflow: hidden;margin-bottom: 0.5rem;}
