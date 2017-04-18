@@ -204,7 +204,7 @@ h3.lo_txt{font-size: 22px;text-align: center;color: #fff;font-family: 'Microsoft
 .p5 .p5_txt2 p.txt_name{padding-left: 1.6rem;width: 4.54rem;line-height: 0.35rem;}
 .p5 .p5_txt2 p.txt_name i{color: #fff;}
 .lw_name{position: absolute;color: #000;font-family: 'Microsoft Yahei';font-size: 26px;top:7.2rem;right: 0rem;display: none;}
-.mb2_wz{position: absolute;bottom: 0.4rem;display: block;width: 6.4rem;}
+.mb2_wz{position: absolute;bottom: 0.4rem;display: none;width: 6.4rem;}
 .p5 .p5_txt2 .mb1_wz{display: none;}
 .p5 .p5_txt2 .mb2_wz{display: block;}
 /*围观*/
