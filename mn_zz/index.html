@@ -419,7 +419,7 @@
 <script type="text/javascript" src="js/base64.js"></script>
  <script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script> 
 <script>
-  alert('14:32');
+  alert('14:35');
   var app=angular.module('myApp',[]);
   app.controller('myCtrl',function  ($scope) {
     var msg_Te={};
@@ -428,25 +428,6 @@
       $scope.msg_Te=msg_name;
       $scope.msg_Te=msg_text;
   });
-  var dynamicLoading = {
-    css: function(path){
-       if(!path || path.length === 0){
-        throw new Error('argument "path" is required !');
-       }
-       var head = document.getElementsByTagName('head')[0];
-          var link = document.createElement('link');
-          link.href = path;
-          link.rel = 'stylesheet';
-          link.type = 'text/css';
-          head.appendChild(link);
-        }
-  }
-  if (/(Android)/i.test(navigator.userAgent)) {
-    alert('安卓');
-    $('.but').css({'bottom':'0.1rem!important'});
-    $('.p5 .p5_txt').css({'padding-top':'6.5rem!important'});
-    $('.p5 .p5_txt2').css({'padding-top':'7.5rem!important'});
-  }
   var swiperNested1 = new Swiper('.swiper-nested-1', {
     pagination: '.pagination',
     speed: 600,
@@ -470,6 +451,13 @@
     }
   }
 $(function(){
+    if (/(Android)/i.test(navigator.userAgent)) {
+      alert('安卓');
+      $('.but').css({'bottom':'0.1rem!important'});
+      $('.p5 .p5_txt').css({'padding-top':'6.5rem!important'});
+      $('.p5 .p5_txt2').css({'padding-top':'7.5rem!important'});
+    };
+
     $('.p7_warp .p7_left').on('click', function(e) {
           e.preventDefault();
           swiperNested1.swipePrev();
