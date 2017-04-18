@@ -419,7 +419,7 @@
 <script type="text/javascript" src="js/base64.js"></script>
  <script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script> 
 <script>
-  alert('15:30');
+  alert('15:42');
   var app=angular.module('myApp',[]);
   app.controller('myCtrl',function  ($scope) {
     var msg_Te={};
@@ -476,10 +476,20 @@
 $(function(){
     if (/(Android)/i.test(navigator.userAgent)) {
       alert('安卓');
-      dynamicLoading.css("http://p1.ifengimg.com/968d479714a706e2/2017/16/test2.css");
-    };
+      $('.but').css({'bottom':'0.1rem'});
+      $('.p5 .p5_txt').css({'padding-top':'7.5rem'});
 
-      
+      $('.p2_content div.odom').each(function  (index) {
+        $(this).on('click',function  () {
+          if(index==1){
+            $('.p5 .p5_txt').addClass('p5_txt3');
+          }else{
+            $('.p5_txt').removeClass('p5_txt3');
+          }
+        })
+      })
+
+    };
 
     $('.p7_warp .p7_left').on('click', function(e) {
           e.preventDefault();
@@ -613,6 +623,7 @@ $(function(){
           $('.picture').removeClass('pit');
           $('.picture2').removeClass('pit');
           $('.p5_txt').removeClass('p5_txt2');
+          $('.p5_txt').removeClass('p5_txt3');
           $('.p8_txt').removeClass('p8_txt2');
         }
       })
