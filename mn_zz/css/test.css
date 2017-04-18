@@ -1,9 +1,9 @@
-.but{bottom: 0.1rem;}
+.but{bottom: 0.1rem!important;}
 .p1 .box{top:3rem;}
 .p1 .box img.p1_txt1{margin-bottom: 0rem;}
-.p5 .p5_txt{padding-top: 6.5rem;}
+.p5 .p5_txt{padding-top: 6.5rem!important;}
 .p5 .p5_txt p.txt_top{margin-bottom: 0.15rem;}
-.p5 .p5_txt2{padding-top: 7.5rem;}
+.p5 .p5_txt2{padding-top: 7.5rem!important;}
 .lw_name{top:6.7rem;}
 .p2 .p2_content{top:3.1rem;}
 .p2 .p2_content a.ok{bottom: 0.15rem;}
