@@ -419,7 +419,7 @@
 <script type="text/javascript" src="js/base64.js"></script>
  <script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script> 
 <script>
-  alert('14:30');
+  alert('14:32');
   var app=angular.module('myApp',[]);
   app.controller('myCtrl',function  ($scope) {
     var msg_Te={};
@@ -443,7 +443,9 @@
   }
   if (/(Android)/i.test(navigator.userAgent)) {
     alert('安卓');
-      dynamicLoading.css("http://p1.ifengimg.com/968d479714a706e2/2017/16/test.css");
+    $('.but').css({'bottom':'0.1rem!important'});
+    $('.p5 .p5_txt').css({'padding-top':'6.5rem!important'});
+    $('.p5 .p5_txt2').css({'padding-top':'7.5rem!important'});
   }
   var swiperNested1 = new Swiper('.swiper-nested-1', {
     pagination: '.pagination',
