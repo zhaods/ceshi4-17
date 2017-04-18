@@ -419,7 +419,7 @@
 <script type="text/javascript" src="js/base64.js"></script>
  <script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script> 
 <script>
-  alert('15:52');
+  alert('15:54');
   var app=angular.module('myApp',[]);
   app.controller('myCtrl',function  ($scope) {
     var msg_Te={};
@@ -450,29 +450,6 @@
       $(".fxy").fadeIn();
     }
   }
-  var dynamicLoading = {
-  css: function(path){
- if(!path || path.length === 0){
-  throw new Error('argument "path" is required !');
- }
- var head = document.getElementsByTagName('head')[0];
-    var link = document.createElement('link');
-    link.href = path;
-    link.rel = 'stylesheet';
-    link.type = 'text/css';
-    head.appendChild(link);
-  },
-  js: function(path){
- if(!path || path.length === 0){
-  throw new Error('argument "path" is required !');
- }
- var head = document.getElementsByTagName('head')[0];
-    var script = document.createElement('script');
-    script.src = path;
-    script.type = 'text/javascript';
-    head.appendChild(script);
-  }
-}
 $(function(){
     if (/(Android)/i.test(navigator.userAgent)) {
       alert('安卓');
