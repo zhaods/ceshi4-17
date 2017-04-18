@@ -32,17 +32,18 @@
     </head>
 <body>
 <style>
-    @media all and (max-height: 960px) {
+    @media (device-height:480px) and (-webkit-min-device-pixel-ratio:2){
       .but{bottom: 0.1rem;}
       .p1 .box{top:3rem;}
       .p1 .box img.p1_txt1{margin-bottom: 0rem;}
+      .p5 .p5_txt{padding-top: 6.5rem;}
       .p5 .p5_txt p.txt_top{margin-bottom: 0.15rem;}
-      .p5 .p5_txt2{padding-top: 8.2rem;}
+      .p5 .p5_txt2{padding-top: 7.5rem;}
       .lw_name{top:6.7rem;}
       .p2 .p2_content{top:3.1rem;}
       .p2 .p2_content a.ok{bottom: 0.15rem;}
       .p8 img.pit2{top:1.42rem;}
-      .p8 .p8_txt,.p5 .p5_txt{padding-top: 6rem;}
+      .p8 .p8_txt,.p5 .p5_txt{padding-top: 7.5rem;}
       .p8 .p8_txt p.txt_top,.p5 .p5_txt p.txt_top{width: 100%; font: 28px/1.38 'Microsoft Yahei'; color: #264197; font-weight: bold; text-align: center; margin-bottom: 0.20rem;}
       .p8 .p8_txt2{padding-top: 8.2rem;}
       .p8 .p8_txt2 p.txt_top{color: #fff;margin-bottom: 0.1rem;}
@@ -156,7 +157,7 @@
       </div> 
       <a href="javascript:;" class="ok"></a> 
      </div> 
-    </li> 
+   </li> 
     <li class="p3" style="background: url(http://p0.ifengimg.com/l/2017/13/b3920ff66ab0032/p3_bg.jpg) no-repeat 0 0/100% 100%;"> 
      <div class="p3_content"> 
       <label> <span>昵称</span> <input type="text" id="name" value="" ng-model="msg_Te.msg_name" /> </label> 
@@ -186,7 +187,7 @@
       <a href="javascript:;" class="sc_phto"></a> 
       <input class="makepic" type="button" hidden="hidden" /> 
      </div> 
-    </li> 
+   </li> 
     <!-- 生成的海报 --> 
     <li class="p4" style="background: url(http://p0.ifengimg.com/l/2017/13/b3920ff66ab0032/p4_bg.jpg) no-repeat 0 0/100% 100%;"> 
      <div class="p4_top"> 
@@ -204,22 +205,17 @@
       </div> 
      </div> 
    </li> 
-   <style>
-     /*.p5 .p5_txt{position: absolute;top:8.3rem;z-index: 10;padding-top: 0px;}
-     p.txt_top{width: 100%; font: 28px/1.38 'Microsoft Yahei'; color: #264197; font-weight: bold; text-align: center; margin-bottom: 0.20rem;position: absolute;top: 8.3rem;z-index: 99} */
-   </style>
-    <!-- 模板层 -->
-    <li class="p5" style="background-color: #006dff;">
-      <img src="http://p0.ifengimg.com/l/2017/13/b3920ff66ab0032/mb22.png" alt="" class="p5_mb" />
-     <!-- picture 头像 --> <img src="http://p0.ifengimg.com/l/2017/13/b3920ff66ab0032/photo.jpg" alt="" class="picture" />
-     <div class="p5_txt">
-      <!-- {{msg_text}} -->
+    <!-- 模板层 --> 
+    <li class="p5" style="background-color: #006dff;"> <img src="http://p0.ifengimg.com/l/2017/13/b3920ff66ab0032/mb22.png" alt="" class="p5_mb" /> 
+     <!-- picture 头像 --> <img src="http://p0.ifengimg.com/l/2017/13/b3920ff66ab0032/photo.jpg" alt="" class="picture" /> 
+     <div class="p5_txt"> 
+      <!-- {{msg_text}} --> 
       <img src="" alt="" class="mb1_wz" />
       <img src="" alt="" class="mb2_wz" />
       <p class="txt_top">{{msg_Te.msg_text}}</p> 
       <p class="txt_name"><i>{{msg_Te.msg_name}}</i></p> 
       <p class="lw_name">{{msg_Te.msg_name}}</p>
-     </div>
+     </div> 
    </li> 
     <!-- 围观点赞 --> 
     <li class="p6" style="background: url(http://p2.ifengimg.com/l/2017/13/b3920ff66ab0032/p6_bg.jpg) no-repeat 0 0/100%;"> 
@@ -471,7 +467,6 @@ $(function(){
     QQ = ua.match(/QQ\//),
     PC = !/iphone|ipod|ipad|android/ig.test(ua);
 
-
     // 晋级海报
     $('span.hb').click(function() {
       //alert('敬请期待');
@@ -497,7 +492,6 @@ $(function(){
         canvas.width = domWidth*scaleBy;
       var context = canvas.getContext('2d');
       context.scale(scaleBy, scaleBy);
-      alert('1')
       html2canvas($('.p5'),{
         allowTaint: true,
         taintTest: false,
@@ -505,7 +499,7 @@ $(function(){
         onrendered: function(canvas) {
           canvas.id = "mycanvas";
           //生成base64图片数据
-          alert('9:45');
+          alert('10:35');
           var dataUrl = canvas.toDataURL();
           $('.frame_pic').attr('src',dataUrl);
           showCanvas();
