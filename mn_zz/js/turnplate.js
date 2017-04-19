@@ -331,6 +331,7 @@ $(function() {
       if (data.msg == 'ok') {
         alert('亲~点赞成功啦~');
         $('#mn' + id).text(data.prized_num);
+        alert('fx_cookie是'+cooke_fx);
         if (cooke_fx) {
           $('#layercon_3').fadeOut();
         };
