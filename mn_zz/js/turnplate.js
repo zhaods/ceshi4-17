@@ -78,13 +78,6 @@ var turnplate = {
         nickname1 = getCookie('oName');
       }
 
-      if(zd_cookie){
-        iphone = $('#iphone').val();
-        nickname1 = $('#nickname1').val();
-        //alert('有cookie后'+iphone+':'+nickname1)
-      }
-      alert(iphone);
-
       root_url = rootPath + "mengniu/index.php?_c=mengniu&_a=choujiang";
       var _this = this;
       $.getJSON(root_url + "&callback=?", {
