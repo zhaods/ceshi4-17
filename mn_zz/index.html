@@ -420,7 +420,6 @@
 <script type="text/javascript" src="js/base64.js"></script>
  <script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script> 
 <script>
-  alert('10:53');
   var app=angular.module('myApp',[]);
   app.controller('myCtrl',function  ($scope) {
     var msg_Te={};
@@ -458,8 +457,6 @@ $(function(){
     $('.main').height(windh);
     document.body.addEventListener('touchmove', function (event) {event.preventDefault();}, false);
     var ch=document.documentElement.clientHeight;
-    
-
     if (/(Android)/i.test(navigator.userAgent)) {
       $('.but').css({'bottom':'0.1rem'});
       $('.p5 .p5_txt').css({'padding-top':'7.6rem'});
@@ -661,11 +658,9 @@ $(function(){
 
   $('#cj').click(function  () {
       if(iOwk){
-        alert(iOwk);
         var cooke_email =getCookie('fenxiang_na');
         var cooke_fx =getCookie('fx_ok');
-        alert(cooke_email);
-        //alert(cooke_fx);;
+        //alert(cooke_email);
         if(cooke_fx){
           alert('亲~每天只能抽奖一次喔~');
           return false;

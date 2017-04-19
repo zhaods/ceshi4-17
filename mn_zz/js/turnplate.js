@@ -85,7 +85,8 @@ var turnplate = {
       }, function(json) {
         var data = eval(json);
         if (data.error == '0') {
-          setCookie('fx_ok','ok');
+          //setCookie('fx_ok','ok');
+          $.cookie("fx_ok",'ok');
           turnplate.errorIndex = data.id;
           turnplate.prizeName = data.prize;
         }else if(data.error == '2') {
@@ -280,6 +281,7 @@ $(function() {
   $('.fxy').click(function() {
     $(this).css('display', 'none');
   })
+  
   // 关闭转盘
   $('.zp_close').click(function() {
     $("#layercon_3").fadeOut();
@@ -330,8 +332,9 @@ $(function() {
         if (cooke_fx) {
           $('#layercon_3').fadeOut();
         };
+        alert(cooke_email);
         
-        if(cooke_email!=cooke_email){
+        if(cooke_email){
           $('#layercon_3').fadeIn();
         };
         
@@ -376,12 +379,12 @@ $(function() {
     }
     
     if (!cooke_email) {
-      setCookie('co_ph', iphone);
-      setCookie('oName', nickname1);
+      //setCookie('co_ph', iphone);
+      //setCookie('oName', nickname1);
+      $.cookie("co_ph",iphone);
+      $.cookie("oName",nickname1);
       //$('#layercon_3').fadeIn();
     }
-
-
 
     show_zan();
   })
