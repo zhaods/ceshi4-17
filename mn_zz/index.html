@@ -9,6 +9,7 @@
 <link rel="stylesheet" href="css/hsai.css" /> 
 <link rel="stylesheet" href="http://y2.ifengimg.com/package/t_20141209__22585/css/idangerous.swiper.css" /> 
 <script src="http://p1.ifengimg.com/l/2016/47/92febf6a0cb3e9a/jquery-1.8.3.min.js"></script> 
+<script src="js/jquery.cookie.js"></script> 
 <script src="http://p2.ifengimg.com/l/2016/33/a80ffe2105de565/idangerous.swiper.min.js"></script> 
 <script type="text/javascript" src="http://p1.ifengimg.com/a/2016/0918/html2canvas.js"></script> 
 <script type="text/javascript" src="http://p1.ifengimg.com/a/2016/1122/H5UV.js"></script> 
@@ -419,7 +420,7 @@
 <script type="text/javascript" src="js/base64.js"></script>
  <script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script> 
 <script>
-  alert('10:40');
+  alert('10:53');
   var app=angular.module('myApp',[]);
   app.controller('myCtrl',function  ($scope) {
     var msg_Te={};
@@ -615,8 +616,7 @@ $(function(){
       var phone=$("#phone").val();
       var param = /^((13|15)|18|14|17)\d{9}$/;
       iOwk=1;
-      setCookie('fenxiang_na',oName);
-      setCookie('fenxiang_ph',phone);
+      
       if(!oName){
         alert("请输入昵称");
         return false;
@@ -633,6 +633,8 @@ $(function(){
         alert("请输入你的证言");
         return false;
       };
+      $.cookie("fenxiang_na",oName);
+      $.cookie("fenxiang_ph",phone);
       $('.p5').show();
       $('.p6_1').show();
       $('.makepic').trigger('click');
