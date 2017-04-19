@@ -70,6 +70,14 @@ var turnplate = {
         //alert(nickname1+':'+iphone)
       }
 
+      //var nickname2 =getCookie('oName');
+      var email2 = getCookie('co_ph');
+      alert('抽奖电话：'+email2);
+      if(email2){
+        iphone =  getCookie('co_ph');
+        nickname1 = getCookie('oName');
+      }
+
       if(zd_cookie){
         iphone = $('#iphone').val();
         nickname1 = $('#nickname1').val();
