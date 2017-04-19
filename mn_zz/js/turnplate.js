@@ -74,7 +74,7 @@ var turnplate = {
       var email2 = getCookie('co_ph');
       alert('抽奖电话：'+email2);
       if(email2){
-        iphone =  getCookie('co_ph');
+        iphone =  email2;
         nickname1 = getCookie('oName');
       }
 
@@ -83,6 +83,7 @@ var turnplate = {
         nickname1 = $('#nickname1').val();
         //alert('有cookie后'+iphone+':'+nickname1)
       }
+      alert(iphone);
 
       root_url = rootPath + "mengniu/index.php?_c=mengniu&_a=choujiang";
       var _this = this;
