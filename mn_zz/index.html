@@ -82,9 +82,9 @@
     <p>2017年3月28日0：00—2017年7月17日23：59，中奖后按操作提示进行兑奖，获取中奖结果后24小时内不兑奖视为自动放弃奖品，所有实物奖品免费寄送。</p> 
     <p>服务电话：010-60675145（电话咨询时间：工作日早9：00-晚17：00；话费自理）</p> 
     <h3>奖品设置：</h3> 
-    <p>特等奖 价值1200元NBA深圳站门票1张（共50张，中奖概率0.25%）；</p> 
-    <p>一等奖 价值4999元京东无门槛电子购物券1张（共5张，中奖概率0.025%）；京东购物卡为实体卡片，有效期三年，请您尽快使用，以免造成不必要的损失。</p> 
-    <p>二等奖 价值3288元iPad mini 4（32G黑色）1部（共10部，中奖概率0.05%）；</p> 
+    <p>特等奖 价值1200元NBA深圳站门票1张（共50张，中奖概率0.17%）；</p> 
+    <p>一等奖 价值4999元京东无门槛电子购物券1张（共5张，中奖概率0.01%）；京东购物卡为电子卡片，有效期三年，请您尽快使用，以免造成不必要的损失。</p> 
+    <p>二等奖 价值3288元iPad mini 4（32G黑色）1部（共10部，中奖概率0.03%）；</p> 
     <p>三等奖 价值10元京东蒙牛旗舰店电子优惠券1张（共30000张，中奖概率99.79%）；中奖后可先领取10元优惠代金券，在京东旗舰店购买新养道零乳糖全脂型牛奶时可直接减免。代金券在微信卡包里查找，请尽快使用，逾期作废。</p> 
     <p>奖品总价值415380元，综合中奖率100% </p> 
     <h3>活动声明：</h3> 
@@ -202,7 +202,7 @@
       </div> 
       <div class="p4_right"> 
        <a href="javascript:;" class="fx"></a> 
-       <a href="javascript:;" class="cj"></a> 
+       <a href="javascript:;" class="cj" id="cj"></a> 
       </div> 
      </div> 
    </li> 
@@ -419,7 +419,7 @@
 <script type="text/javascript" src="js/base64.js"></script>
  <script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script> 
 <script>
-  alert('15:54');
+  alert('10:40');
   var app=angular.module('myApp',[]);
   app.controller('myCtrl',function  ($scope) {
     var msg_Te={};
@@ -451,10 +451,17 @@
     }
   }
 $(function(){
+    var windw = $(window).width();
+    var windh = document.documentElement.clientHeight;
+    var Animate_Index = 0;
+    $('.main').height(windh);
+    document.body.addEventListener('touchmove', function (event) {event.preventDefault();}, false);
+    var ch=document.documentElement.clientHeight;
+    
+
     if (/(Android)/i.test(navigator.userAgent)) {
-      alert('安卓');
       $('.but').css({'bottom':'0.1rem'});
-      $('.p5 .p5_txt').css({'padding-top':'7.5rem'});
+      $('.p5 .p5_txt').css({'padding-top':'7.6rem'});
       $('.lw_name').css({'top':'6.7rem'});
 
       $('.p2_content div.odom').each(function  (index) {
@@ -466,7 +473,6 @@ $(function(){
           }
         })
       })
-
     };
 
     $('.p7_warp .p7_left').on('click', function(e) {
@@ -570,13 +576,6 @@ $(function(){
           }
       });
     };
-
-    var windw = $(window).width();
-    var windh = document.documentElement.clientHeight;
-    var Animate_Index = 0;
-    $('.main').height(windh);
-    document.body.addEventListener('touchmove', function (event) {event.preventDefault();}, false);
-    var ch=document.documentElement.clientHeight;
     //选择模板
     $('.p2_content div.odom').each(function  (index) {
       $(this).on('click',function  () {
@@ -615,35 +614,67 @@ $(function(){
       oName = $.trim(oName);
       var phone=$("#phone").val();
       var param = /^((13|15)|18|14|17)\d{9}$/;
-      
       iOwk=1;
       setCookie('fenxiang_na',oName);
       setCookie('fenxiang_ph',phone);
       if(!oName){
         alert("请输入昵称");
         return false;
-      }
-
+      };
       if(!phone || !param.test(phone)){
         alert('请填写正确手机号');
         return false;
-      }
-
+      };
       if($('#add-img').val() == ''){
         alert("请上传你的靓照");
         return false;
-      }
+      };
       if(blog=='请保持在24个字以内'){
         alert("请输入你的证言");
         return false;
-      }
+      };
       $('.p5').show();
       $('.p6_1').show();
       $('.makepic').trigger('click');
       $('.p5').css('display','none');
     })
 
- 
+  function fx_txt() {
+    alert('分享成功！');
+    var cooke_email =getCookie('fenxiang_na');
+    var cooke_fx =getCookie('fx_ok');
+    //alert(cooke_email);
+    if(cooke_email){
+      iphone = getCookie('fenxiang_ph');
+      nickname1 = getCookie('fenxiang_na');
+      if(cooke_fx){
+        $("#layercon_3").fadeOut();
+      }else{
+        $("#layercon_3").fadeIn();
+      }
+      $(".fxy").fadeOut();
+      //alert(iphone);
+    }
+  };
+
+  $('#cj').click(function  () {
+      if(iOwk){
+        alert(iOwk);
+        var cooke_email =getCookie('fenxiang_na');
+        var cooke_fx =getCookie('fx_ok');
+        alert(cooke_email);
+        //alert(cooke_fx);;
+        if(cooke_fx){
+          alert('亲~每天只能抽奖一次喔~');
+          return false;
+        };
+        if(cooke_email){
+          alert('分享到朋友圈抽奖');
+          return false;
+        };
+      };
+  });
+
 var root_arr=['喜大普奔！不花钱竟然可以去美国，还能现场看NBA！','我发言人都做过，现在有机会当蒙牛新养道的代言人了！','突然想去美国看场NBA，就看到这个，为我量身打造的？','喝牛奶拉肚子？作为新养道的忠实粉丝，我表示难以理解。'];
   root_arr=root_arr[Math.floor(Math.random()*4)];
   var mainTitle = "蒙牛——见证好营养 一起好吸收", //分享标题
@@ -673,40 +704,6 @@ var root_arr=['喜大普奔！不花钱竟然可以去美国，还能现场看NB
     
     SetWordsWexin(mainTitle,mainDesc,mainURL,mainImgUrl);
   });
-
-  function fx_txt() {
-    alert('分享成功！');
-    var cooke_email =getCookie('fenxiang_na');
-    var cooke_fx =getCookie('fx_ok');
-    //alert(cooke_email);
-    if(cooke_email){
-      iphone = getCookie('fenxiang_ph');
-      nickname1 = getCookie('fenxiang_na');
-      if(cooke_fx){
-        $("#layercon_3").fadeOut();
-      }else{
-        $("#layercon_3").fadeIn();
-      }
-      $(".fxy").fadeOut();
-      //alert(iphone);
-    }
-  }
-
-  $('.cj').click(function  () {
-      if(iOwk){
-        var cooke_email =getCookie('fenxiang_na');
-        var cooke_fx =getCookie('fx_ok');
-        //alert(cooke_fx);
-        if(cooke_fx){
-          alert('亲~每天只能抽奖一次喔~');
-          return false;
-        };
-        if(cooke_email){
-          alert('分享到朋友圈抽奖');
-          return false;
-        };
-      };
-    })
 
   function SetWordsWexin(title,desc,url,image){
       wx.ready(function  () {
@@ -793,14 +790,14 @@ var root_arr=['喜大普奔！不花钱竟然可以去美国，还能现场看NB
             zphtml(data.list,'search');
 
         });
-  });
-  //围观点赞
-  $('.but span').eq(2).click(function(){
-      $.getJSON(rootPath+"mengniu/index.php?_c=mengniu&_a=listp&callback=?",function(json){
-          var data = eval(json);
-          zphtml(data.list,data.page);
-      });
-  });
+    });
+    //围观点赞
+    $('.but span').eq(2).click(function(){
+        $.getJSON(rootPath+"mengniu/index.php?_c=mengniu&_a=listp&callback=?",function(json){
+            var data = eval(json);
+            zphtml(data.list,data.page);
+        });
+    });
     //分页
     function zphtml(data,type){
         var str=[];
@@ -827,7 +824,7 @@ var root_arr=['喜大普奔！不花钱竟然可以去美国，还能现场看NB
             str.push("<p class='txt_name'><i>"+data[i]['nickname']+"</i></p><p class='lw_name2'>"+data[i]['nickname']+"</p></div></div>");
             str.push("<div class='nei_txt'><div class='nei_txt_left'>");
             str.push("<p class='p_name'>"+data[i]['nickname']+"</p><p class='p_num'>编号: <span>00"+data[i]['id']+"</span></p></div>");
-            str.push("<div class='nei_txt_right'><a href='javascript:;' class='xin' id="+data[i]['id']+"></a><span class='num' id='mn"+data[i]['id']+"'>"+data[i]['prized']+"</span></div></div></div>");       
+            str.push("<div class='nei_txt_right'><a href='javascript:;' class='xin' id="+data[i]['id']+"></a><span class='num' id='mn"+data[i]['id']+"'>"+data[i]['prized']+"</span></div></div></div>");
           }
           if(type=='search'){
             $(".center_nei2").html(str.join(""));
