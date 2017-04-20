@@ -337,7 +337,7 @@ $(function() {
           $('#layercon_3').fadeIn();
         };
         if (cooke_fx) {
-          $('#layercon_3').fadeOut();
+          $('#layercon_3').css('display','none');
         };
         
         return false;
