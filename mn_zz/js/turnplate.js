@@ -221,6 +221,7 @@ $(function() {
     $('.main ul li').css('display', 'none');
     $('.gzsm').css('display', 'block');
     $('.p1').css('display', 'block');
+    $('.cp_iocn').css('display', 'none');
   })
 
   $('.but span').each(function(index) {
@@ -243,6 +244,7 @@ $(function() {
   // 注册报名
   $('.but span.zc').click(function() {
     $('.main ul li').css('display', 'none');
+    $('.cp_iocn').fadeIn();
     $('.p5_mb').attr('src', arr[0]);
     $('#name').val('');
    // $('#email').val('');
@@ -260,6 +262,7 @@ $(function() {
 
   $('.but span.dz').click(function() {
     $('.main ul li').css('display', 'none');
+    $('.cp_iocn').fadeIn();
     $('.p6').css('display', 'block');
   })
 

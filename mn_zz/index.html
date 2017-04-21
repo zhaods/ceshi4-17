@@ -473,7 +473,7 @@
 <script type="text/javascript" src="js/base64.js"></script>
  <script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script> 
 <script>
-alert('14:30');
+alert('14:35');
   var app=angular.module('myApp',[]);
   app.controller('myCtrl',function  ($scope) {
     var msg_Te={};
@@ -515,7 +515,7 @@ $(function(){
       $('.but').css({'bottom':'0.1rem'});
       $('.p5 .p5_txt').css({'padding-top':'7.6rem'});
       $('.lw_name').css({'top':'6.7rem'});
-      $('.cp_iocn').css({'bottom':'1.8rem;'});
+      $('.cp_iocn').css({'bottom':'1.5rem;'});
 
 
       $('.p2_content div.odom').each(function  (index) {
@@ -557,6 +557,7 @@ $(function(){
     // 晋级海报
     $('span.hb').click(function() {
       //alert('敬请期待');
+      $('.cp_iocn').fadeIn();
       $('.main ul li').css('display', 'none');
       $('.p7').css('display','block');
     });
