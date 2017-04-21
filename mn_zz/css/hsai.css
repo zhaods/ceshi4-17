@@ -312,7 +312,7 @@ h3.lo_txt{font-size: 22px;text-align: center;color: #fff;font-family: 'Microsoft
 .center_nei2 .close{position: absolute;top:0px;right: 0px;z-index: 9;}
 .center_nei2 .close img{width: 0.5rem;}
 .p6_center .close{display: none;}
-.cp_iocn{width: 3rem;position: absolute;left: 2.4rem;bottom: 2.4rem;z-index: 5}
+.cp_iocn{width: 3rem;position: absolute;left: 2.4rem;bottom: 2rem;z-index: 5}
 /*分享页*/
 .fxy{width: 100%;height: 100%;background: url(http://p0.ifengimg.com/l/2017/13/b3920ff66ab0032/fx.png) no-repeat 0 0/100%;position: absolute;top:0;z-index: 99;display: none;}
 /*转盘*/
