@@ -473,7 +473,7 @@
 <script type="text/javascript" src="js/base64.js"></script>
  <script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script> 
 <script>
-alert('15:05')
+alert('15:42')
   var app=angular.module('myApp',[]);
   app.controller('myCtrl',function  ($scope) {
     var msg_Te={};
@@ -705,6 +705,19 @@ $(function(){
       $('.p5').css('display','none');
     })
 
+    // 点击放大;
+    $('.p6_center .img_warp').live("click", function (){
+        alert('ok')
+        //alert($(this).attr("id").substring(2));
+        var bh=parseInt($(this).attr("id").substring(2));
+        $.getJSON(rootPath+"mengniu/index.php?_c=mengniu&_a=search&callback=?",{bh:bh},function(json){
+            var data = eval(json);
+            $('.p6 .p6_content .p6_warp').css('display','none');
+            zphtml(data.list,'search');
+        });
+        //$(".center_nei2").fadeIn();
+    });
+
   function fx_txt() {
     alert('分享成功！');
     var cooke_email =getCookie('fenxiang_na');
@@ -854,18 +867,7 @@ var root_arr=['喜大普奔！不花钱竟然可以去美国，还能现场看NB
             zphtml(data.list,'search');
         });
     });
-    // 点击放大;
-    $('.p6_center .img_warp').live("click", function () {
-      alert('ok')
-        //alert($(this).attr("id").substring(2));
-        var bh=parseInt($(this).attr("id").substring(2));
-        $.getJSON(rootPath+"mengniu/index.php?_c=mengniu&_a=search&callback=?",{bh:bh},function(json){
-            var data = eval(json);
-            $('.p6 .p6_content .p6_warp').css('display','none');
-            zphtml(data.list,'search');
-        });
-        //$(".center_nei2").fadeIn();
-    });
+    
     $('.center_nei2 .close').live('click',function  () {
       $(".center_nei2").css('display','none');
       $(".p6_warp").fadeIn();
@@ -897,7 +899,7 @@ var root_arr=['喜大普奔！不花钱竟然可以去美国，还能现场看NB
               str.push("<div class='p8_txt'>");
             }else{
               str.push("<div class='close'><img src='http://p2.ifengimg.com/l/2017/13/5512db4f09c9b7f/close.png'></div>");
-              str.push("<div class='img_warp'><img src='http://p1.ifengimg.com/968d479714a706e2/2017/13/mb22.png' class='p8_mb'>");
+              str.push("<div class='img_warp' id='bj" + data[i]['id'] + "'><img src='http://p1.ifengimg.com/968d479714a706e2/2017/13/mb22.png' class='p8_mb'>");
               str.push("<img src='"+data[i]['imgpath']+"' class='picture2 pit2' />");
               str.push("<div class='p8_txt p8_txt2'>");
             } 
