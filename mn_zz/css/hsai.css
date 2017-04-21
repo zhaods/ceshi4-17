@@ -131,6 +131,12 @@ h3.lo_txt{font-size: 22px;text-align: center;color: #fff;font-family: 'Microsoft
 .gzsm .gzsm_warp .gzsm_txt{width: 3.91rem;height: 3.26rem;position: absolute;top:1.95rem;left: 1.68rem;color: #fff;overflow: auto;}
 .gzsm .gzsm_warp .gzsm_txt h3{font-size: 24px;line-height: 0.8rem;}
 .gzsm .gzsm_warp .gzsm_txt p{font:21px/1.34 'Microsoft Yahei';margin-bottom: 0.2rem;}
+.gzsm2{width: 5.49rem;height: 9rem;position: absolute;top:1.2rem;left: 1.15rem;z-index: 100;display: none;}
+.gzsm2 .gzsm2_warp{width: 100%;height: 100%;position: relative;}
+.gzsm2 .gzsm2_warp a{width: 0.9rem;height: 0.9rem;position: absolute;top:0px;right: 0;z-index: 110;}
+.gzsm2 .gzsm2_warp .gzsm_txt2{width: 100%;height: 100%;position: absolute;color: #fff;overflow: auto;}
+.gzsm2 .gzsm2_warp .gzsm_txt2 img{width: 5.49rem;}
+.blak{width: 100%;height: 100%;background: #000;opacity: .8;position: absolute;top:0;left: 0;display: none;z-index: 6}
 
 .p2 .p2_content{width: 5.69rem;height: 5.23rem;position: relative;top:3.24rem;left: 0.92rem;}
 .p2 .p2_content div{position: absolute;width: 2.38rem;height: 4.76rem;}
@@ -303,8 +309,10 @@ h3.lo_txt{font-size: 22px;text-align: center;color: #fff;font-family: 'Microsoft
 .center_nei2 .img_warp .p8_txt2 p.txt_name{width: 2.44rem; height: 0.19rem;padding-left: 0.6rem;background: url(http://p1.ifengimg.com/l/2017/13/b3920ff66ab0032/mb2_txt.png) no-repeat 0 0/100%;line-height: 0.4rem;}
 .center_nei2 .img_warp .p8_txt2 p.txt_name i{color: #fff;margin-left: 0.15rem;}
 .center_nei2 .img_warp .p8_txt2 .lw_name2{position: absolute; color: #000; font-family: 'Microsoft Yahei'; font-size: 16px; top: 3.65rem; right: 0rem; display: block;}
-
-
+.center_nei2 .close{position: absolute;top:0px;right: 0px;z-index: 9;}
+.center_nei2 .close img{width: 0.5rem;}
+.p6_center .close{display: none;}
+.cp_iocn{width: 3rem;position: absolute;left: 2.4rem;bottom: 2.4rem;z-index: 5}
 /*分享页*/
 .fxy{width: 100%;height: 100%;background: url(http://p0.ifengimg.com/l/2017/13/b3920ff66ab0032/fx.png) no-repeat 0 0/100%;position: absolute;top:0;z-index: 99;display: none;}
 /*转盘*/
@@ -369,7 +377,7 @@ h3.lo_txt{font-size: 22px;text-align: center;color: #fff;font-family: 'Microsoft
 .p7_warp .rwconter p.p_name{width: 2.03rem;height: 0.33rem;text-align: center;line-height: 0.33rem;font-size: 24px;color: #fff;margin-bottom: 0.2rem;background: url(http://p0.ifengimg.com/l/2017/13/b3920ff66ab0032/tm.png);float: right;}
 .p7_warp .rwconter .l_t span{width: 0.78rem;height: 0.36rem;border:1px solid #fff;line-height: 0.36rem;display: inline-block;color: #fff;font-size: 24px;margin-right: 0.1rem;text-align: center;float: left;}
 .p7_warp .rwconter p.p_num{font-size: 24px;height: 0.33rem;border:1px solid #fff;line-height: 0.33rem;color: #fff;text-align: center;float: right;}
-.p7_warp .pagination{width: 2rem; position: absolute; bottom: 0; left: 50%; margin-left: -0.5rem;}
+.p7_warp .pagination{position: absolute; bottom: 0; left: 50%;width: 2.7rem;margin-left: -1.3rem;}
 .p7_warp .swiper-pagination-switch{width: 19px; height: 32px; background: url(http://p3.ifengimg.com/l/2017/13/b3920ff66ab0032/nav.png) no-repeat; background-position: 0 -377px; display: block; float: left;margin-right: 0.1rem;}
 .p7_warp .swiper-active-switch{background-position: -25px -377px;}
 .p7_content .p7_but{width: 100%;height: 0.48rem;position: absolute;bottom: 0;overflow: hidden;}
