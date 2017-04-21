@@ -473,7 +473,7 @@
 <script type="text/javascript" src="js/base64.js"></script>
  <script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script> 
 <script>
-alert('15:55')
+alert('16:00')
   var app=angular.module('myApp',[]);
   app.controller('myCtrl',function  ($scope) {
     var msg_Te={};
@@ -706,11 +706,7 @@ $(function(){
     })
 
     // 点击放大;
-    $('.center_nei .p8_txt2').live("touchstart", function (){
-        alert('123')
-    });
     $('.p6_center .img_warp').live("touchstart", function (){
-        alert('ok')
         //alert($(this).attr("id").substring(2));
         var bh=parseInt($(this).attr("id").substring(2));
         $.getJSON(rootPath+"mengniu/index.php?_c=mengniu&_a=search&callback=?",{bh:bh},function(json){
@@ -871,7 +867,7 @@ var root_arr=['喜大普奔！不花钱竟然可以去美国，还能现场看NB
         });
     });
     
-    $('.center_nei2 .close').live('click',function  () {
+    $('.center_nei2 .close').live('touchstart',function  () {
       $(".center_nei2").css('display','none');
       $(".p6_warp").fadeIn();
     });
