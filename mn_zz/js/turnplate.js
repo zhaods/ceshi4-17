@@ -297,7 +297,6 @@ $(function() {
   $('.nei_txt_right a.xin').live('click', function() {
     oId = parseInt(this.id);
     var cooke_email = getCookie('co_ph');
-    
     if (!cooke_email) {
       $('.xinx').fadeIn();
     }else{
