@@ -473,7 +473,7 @@
 <script type="text/javascript" src="js/base64.js"></script>
  <script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script> 
 <script>
-alert('15:50')
+alert('15:55')
   var app=angular.module('myApp',[]);
   app.controller('myCtrl',function  ($scope) {
     var msg_Te={};
@@ -706,10 +706,10 @@ $(function(){
     })
 
     // 点击放大;
-    $('.center_nei .p8_txt2').live("click", function (){
+    $('.center_nei .p8_txt2').live("touchstart", function (){
         alert('123')
     });
-    $('.p6_center .img_warp').live("click", function (){
+    $('.p6_center .img_warp').live("touchstart", function (){
         alert('ok')
         //alert($(this).attr("id").substring(2));
         var bh=parseInt($(this).attr("id").substring(2));
