@@ -2050,6 +2050,7 @@
 <script type="text/javascript" src="http://p2.ifengimg.com/l/2017/17/fe54ddf438f83ba/base64.js"></script> 
 <script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script> 
 <script>
+// 16:38
 var app = angular.module('myApp', []);
     app.controller('myCtrl', function ($scope) {
       var msg_Te = {};
@@ -2195,11 +2196,13 @@ var app = angular.module('myApp', []);
       }
     }
     $(function () {
+      $("body").on("touchmove",function(event){
+        event.preventDefault;
+      }, false)
       var windw = $(window).width();
       var windh = document.documentElement.clientHeight;
       var Animate_Index = 0;
       $('.main').height(windh);
-      document.body.addEventListener('touchmove', function (event) { event.preventDefault(); }, false);
       var ch = document.documentElement.clientHeight;
 
       if (/(Android)/i.test(navigator.userAgent)) {

@@ -236,8 +236,8 @@ img.p1_minlk{bottom: -0.5rem;z-index: 5;position: absolute;left: 0;}
 .p8_top{margin-top: 0.4rem;}
 .p8_top img{width: 100%;}
 .p8 .p6_content .p8_warp{overflow: hidden;margin-left: 0.18rem;overflow-y: auto;}
-.p8 .p8_content .p8_center{width: 6.39rem;height: 8.6rem;overflow: hidden;;overflow-y: auto;}
-.p8 .p8_content .p8_center .center_nei{float: left;margin-right: 0.25rem;width: 2.87rem;height: 5.4rem;position: relative;}
+.p8 .p8_content .p8_center{width: 6.39rem;height: 8.6rem;overflow: hidden;margin-left:0.2rem;overflow-y: auto;}
+.p8 .p8_content .p8_center .center_nei{float: left;margin-right: 0.25rem;width: 2.87rem;height: 5.4rem;position: relative;overflow: hidden;}
 .p8 .p8_content .p8_center .center_nei .img_warp{
   width: 2.87rem;height: 4.33rem;background: url(http://p0.ifengimg.com/l/2017/13/b3920ff66ab0032/tm.png);position: relative;
 }
