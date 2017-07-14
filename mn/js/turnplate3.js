@@ -1,6 +1,5 @@
 //var rootPath = "http://www.chenyi.com/yxcenter/trunk/02src/2014/psm_v1/";
 var rootPath = "http://creative.ifeng.com/psm_v1/";
-
 var errorIndex = [0, 1, 2, 3, 4, 5];
 errorIndex = errorIndex[Math.floor(Math.random() * errorIndex.length)]; //页面刷新获取随机数
 //console.log(errorIndex); 输出随机数，输出多少指针落指在所在位置
@@ -72,10 +71,10 @@ var turnplate = {
 
       //var nickname2 =getCookie('oName');
       var email2 = getCookie('co_ph');
-      alert('抽奖电话：'+email2);
+      //alert('抽奖电话：'+email2);
       if(email2){
         iphone =  email2;
-        nickname1 = getCookie('oName');
+        nickname1 = decodeURI(getCookie('oName'));
       }
 
       root_url = rootPath + "mengniu/index.php?_c=mengniu&_a=choujiang";
@@ -87,7 +86,6 @@ var turnplate = {
       }, function(json) {
         var data = eval(json);
         if (data.error == '0') {
-          //setCookie('fx_ok','ok');
           $.cookie("fx_ok",'ok');
           turnplate.errorIndex = data.id;
           turnplate.prizeName = data.prize;
@@ -199,6 +197,12 @@ var turnplate = {
           $(".sc_but").fadeIn();
           return false;
         }
+        if(ceshu==0){
+          alert('您运气太棒啦！恭喜您获得NBA深圳站现场门票！');
+          $('#layercon_3').css('display','none');
+          $(".zjl").fadeIn();
+          return false;
+        }
       }, 400)
       return;
     }
@@ -217,9 +221,10 @@ turnplate.init();
 
 $(function() {
   // 活动规则
-  $('.but span.gz').click(function() {
+  $('.p1_txt1').click(function() {
     $('.main ul li').css('display', 'none');
     $('.gzsm').css('display', 'block');
+      $('.blak').fadeIn();
     $('.p1').css('display', 'block');
     $('.cp_iocn').css('display', 'none');
   })
@@ -234,7 +239,7 @@ $(function() {
 
   $('.gzsm_warp a.close').click(function() {
     $('.gzsm').css('display', 'none');
-    $('.but span').removeClass('nav');
+      $('.blak').fadeOut();
   })
 
   $('.clo_b').click(function() {
@@ -242,7 +247,7 @@ $(function() {
   })
 
   // 注册报名
-  $('.but span.zc').click(function() {
+  /*$('.p1 .p1_bm').click(function() {
     $('.main ul li').css('display', 'none');
     $('.cp_iocn').fadeIn();
     $('.p5_mb').attr('src', arr[0]);
@@ -256,14 +261,13 @@ $(function() {
 
     $('.p5').hide();
     $('.p2').css('display', 'block');
-  })
+  })*/
   // 围观点赞
-
-
-  $('.but span.dz').click(function() {
+  $('.but span.dz,.p1 .p1_bm').click(function() {
     $('.main ul li').css('display', 'none');
     $('.cp_iocn').fadeIn();
-    $('.p6').css('display', 'block');
+
+    $('.p8').css('display', 'block');
   })
 
   //选择模板
@@ -274,6 +278,7 @@ $(function() {
       nav.addClass('turr');
     })
   })
+
   // 注册
   $('a.ok').click(function() {
     $('.main ul li').css('display', 'none');
@@ -311,15 +316,17 @@ $(function() {
     var cooke_email = getCookie('co_ph');
     //alert('点赞后cookie'+cooke_email);
     if(cooke_email){
-      nickname2 =getCookie('oName');
+      nickname2 =decodeURI(getCookie('oName'));
       email2 = getCookie('co_ph');
     }else{
-      nickname2 = $('#nickname1').val();
+      nickname2 = decodeURI($("#nickname1").val());
       email2 = $('#iphone').val();
     }
-
+    
     //alert('点赞后判断的姓名手机'+nickname2+':'+email2);
     console.log(nickname2+':'+email2);
+
+    
     var sub_data = {
       'num': num,
       'bid': id,
@@ -327,21 +334,22 @@ $(function() {
       'mobile':email2,
       'nickname': nickname2,
     }
+    for(var i in sub_data){
+      console.log(sub_data[i])
+    }
     var cooke_fx =getCookie('fx_ok');
     $.getJSON(rootPath + "mengniu/index.php?_c=mengniu&_a=prized&callback=?", sub_data, function(json) {
       var data = eval(json);
       if (data.msg == 'ok') {
         alert('亲~点赞成功啦~');
         $('#mn' + id).text(data.prized_num);
-        alert('fx_cookie是'+cooke_fx);
-        
+        //alert('fx_cookie是'+cooke_fx);
         if(cooke_email){
           $('#layercon_3').fadeIn();
         };
         if (cooke_fx) {
           $('#layercon_3').css('display','none');
         };
-        
         return false;
       };
       if (data.msg == 'fail') {
@@ -361,16 +369,14 @@ $(function() {
     });
     $('.xinx').fadeOut();
   }
-
   //提交输入信息弹出抽奖
   $('.xinx_sub').on('click', function() {
-    var nickname1 = $('#nickname1').val();
+    var nickname1 = decodeURI($("#nickname1").val());
     nickname1 = $.trim(nickname1);
     //var email1 = $("#email1").val();
     var iphone = $("#iphone").val();
     var param = /^((13|15)|18|14|17)\d{9}$/;
     var cooke_email = getCookie('co_ph');
-
     //email1 = $.trim(email1);
     var reg = /^\w+((-\w+)|(\.\w+))*\@[A-Za-z0-9]+((\.|-)[A-Za-z0-9]+)*\.[A-Za-z0-9]+$/;
     if (!nickname1) {
